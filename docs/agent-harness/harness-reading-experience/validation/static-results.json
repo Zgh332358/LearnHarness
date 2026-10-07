@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-08",
+  "html_bytes": 320208,
+  "html_sha256": "857f20e2083de347ee4baa1375dfb820e4aa834cfddcf03c47dc28a5e324d5be",
+  "old_content_blocks": 395,
+  "missing_content_blocks": [],
+  "missing_old_chapter_ids": [],
+  "ids": 593,
+  "duplicate_ids": [],
+  "broken_hash_links": [],
+  "chapters": 18,
+  "figures": 9,
+  "labs": 4,
+  "self_tests": 10,
+  "tables": 26,
+  "captions": 26,
+  "headers": 93,
+  "scoped_headers": 93,
+  "external_runtime_assets": [],
+  "contrast_samples": [
+    {
+      "role": "正文",
+      "foreground": "#202d29",
+      "background": "#f6f5ef",
+      "ratio": 13.09
+    },
+    {
+      "role": "正文",
+      "foreground": "#202d29",
+      "background": "#fffefa",
+      "ratio": 14.168
+    },
+    {
+      "role": "正文",
+      "foreground": "#202d29",
+      "background": "#edf1e9",
+      "ratio": 12.5
+    },
+    {
+      "role": "正文",
+      "foreground": "#202d29",
+      "background": "#e3ece1",
+      "ratio": 11.814
+    },
+    {
+      "role": "辅助文字",
+      "foreground": "#53615a",
+      "background": "#f6f5ef",
+      "ratio": 5.961
+    },
+    {
+      "role": "辅助文字",
+      "foreground": "#53615a",
+      "background": "#fffefa",
+      "ratio": 6.452
+    },
+    {
+      "role": "辅助文字",
+      "foreground": "#53615a",
+      "background": "#edf1e9",
+      "ratio": 5.692
+    },
+    {
+      "role": "辅助文字",
+      "foreground": "#53615a",
+      "background": "#e3ece1",
+      "ratio": 5.38
+    },
+    {
+      "role": "强调/焦点",
+      "foreground": "#235640",
+      "background": "#f6f5ef",
+      "ratio": 7.763
+    },
+    {
+      "role": "强调/焦点",
+      "foreground": "#235640",
+      "background": "#fffefa",
+      "ratio": 8.402
+    },
+    {
+      "role": "强调/焦点",
+      "foreground": "#235640",
+      "background": "#edf1e9",
+      "ratio": 7.413
+    },
+    {
+      "role": "强调/焦点",
+      "foreground": "#235640",
+      "background": "#e3ece1",
+      "ratio": 7.006
+    }
+  ],
+  "contrast_scope": "常用角色色实色组合；不是逐像素截图审计或完整WCAG认证"
+}

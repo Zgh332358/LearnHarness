@@ -1,0 +1,120 @@
+[
+  {
+    "name": "first-tab-skip",
+    "pass": true,
+    "data": {
+      "focus": "skip-link",
+      "text": "跳到正文"
+    }
+  },
+  {
+    "name": "skip-target",
+    "pass": true,
+    "data": {
+      "focus": "chapter-1",
+      "top": 96.1875
+    }
+  },
+  {
+    "name": "menu-tab-inside",
+    "pass": true,
+    "data": {
+      "open": true,
+      "inDialog": true
+    }
+  },
+  {
+    "name": "menu-escape-restores",
+    "pass": true,
+    "data": {
+      "open": false,
+      "focus": "menu-trigger"
+    }
+  },
+  {
+    "name": "search-empty-result",
+    "pass": true,
+    "data": {
+      "text": "没有找到。可以试试“执行”“上下文”“系统位置”，或缩短关键词。",
+      "count": 0
+    }
+  },
+  {
+    "name": "search-clear",
+    "pass": true,
+    "data": {
+      "value": "",
+      "focus": "search-input",
+      "status": "输入关键词，查找章题、小节与正文。所有查找都在本文件内进行。"
+    }
+  },
+  {
+    "name": "search-bounded-heading-first",
+    "pass": true,
+    "data": {
+      "count": 20,
+      "status": "找到 118 处，显示前 20 处。选择结果进入原文。",
+      "first": "#section-9"
+    }
+  },
+  {
+    "name": "search-escape-restores",
+    "pass": true,
+    "data": {
+      "open": false,
+      "focus": "search-trigger"
+    }
+  },
+  {
+    "name": "full-scroll-current",
+    "pass": true,
+    "data": {
+      "visible": 18,
+      "top": 96.21875,
+      "current": "07 · 本轮上下文"
+    }
+  },
+  {
+    "name": "full-close-keeps-chapter",
+    "pass": true,
+    "data": {
+      "visible": [
+        "7"
+      ],
+      "focus": "full-reading",
+      "titleTop": 96.09375
+    }
+  },
+  {
+    "name": "large-font",
+    "pass": true,
+    "data": {
+      "font": "20px",
+      "width": 390,
+      "docWidth": 390
+    }
+  },
+  {
+    "name": "history-back-scroll",
+    "pass": true,
+    "data": {
+      "y": 693.5,
+      "hash": "#chapter-4",
+      "chapter": "4"
+    }
+  },
+  {
+    "name": "history-forward",
+    "pass": true,
+    "data": {
+      "chapter": "9",
+      "hash": "#chapter-9",
+      "errors": []
+    }
+  },
+  {
+    "name": "runtime-errors",
+    "pass": true,
+    "data": []
+  }
+]

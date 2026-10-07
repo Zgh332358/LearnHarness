@@ -1,0 +1,69 @@
+[
+  {
+    "name": "search-result-focus-to-original",
+    "pass": true,
+    "data": {
+      "focus": "chapter-12",
+      "dialogOpen": false,
+      "targetTop": 96.09375
+    }
+  },
+  {
+    "name": "mobile-tab-focus-visible-between-bars",
+    "pass": true,
+    "data": {
+      "focus": "recovery-action-0",
+      "rect": {
+        "x": 57,
+        "y": 796.4296875,
+        "width": 18,
+        "height": 18,
+        "top": 796.4296875,
+        "right": 75,
+        "bottom": 814.4296875,
+        "left": 57
+      },
+      "topbarBottom": 66,
+      "bottomTop": 839
+    }
+  },
+  {
+    "name": "reload-restores-actual-chapter-scroll",
+    "pass": true,
+    "data": {
+      "before": {
+        "y": 93.5,
+        "chapter": "13"
+      },
+      "after": {
+        "y": 93.5,
+        "chapter": "13"
+      }
+    }
+  },
+  {
+    "name": "deep-link-reload",
+    "pass": true,
+    "data": {
+      "hash": "#cycle-title",
+      "chapter": "2"
+    }
+  },
+  {
+    "name": "local-single-file-runtime",
+    "pass": true,
+    "data": {
+      "navigation": [
+        {
+          "type": "reload",
+          "domContentLoaded": 45,
+          "load": 46.5,
+          "transfer": 300,
+          "decoded": 320208
+        }
+      ],
+      "resources": []
+    },
+    "scope": "本机HTTP样本，不是线上CoreWebVitals/弱网保证"
+  }
+]
