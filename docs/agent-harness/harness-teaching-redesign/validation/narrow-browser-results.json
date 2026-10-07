@@ -1,0 +1,72 @@
+[
+  {
+    "chapter": "#chapter-2",
+    "documentWidth": 393,
+    "figures": [
+      354
+    ],
+    "labs": [
+      {
+        "id": "cycle-lab",
+        "width": 353.8461608886719
+      }
+    ],
+    "viewport": 393,
+    "visibleChapter": "2"
+  },
+  {
+    "chapter": "#chapter-4",
+    "documentWidth": 393,
+    "figures": [
+      354
+    ],
+    "labs": [
+      {
+        "id": "check-lab",
+        "width": 353.8461608886719
+      }
+    ],
+    "viewport": 393,
+    "visibleChapter": "4"
+  },
+  {
+    "chapter": "#chapter-7",
+    "documentWidth": 393,
+    "figures": [
+      354
+    ],
+    "labs": [
+      {
+        "id": "context-lab",
+        "width": 353.8461608886719
+      }
+    ],
+    "viewport": 393,
+    "visibleChapter": "7"
+  },
+  {
+    "chapter": "#chapter-9",
+    "documentWidth": 393,
+    "figures": [
+      354
+    ],
+    "labs": [
+      {
+        "id": "recovery-lab",
+        "width": 353.8461608886719
+      }
+    ],
+    "viewport": 393,
+    "visibleChapter": "9"
+  },
+  {
+    "chapter": "#chapter-10",
+    "documentWidth": 393,
+    "figures": [
+      354
+    ],
+    "labs": [],
+    "viewport": 393,
+    "visibleChapter": "10"
+  }
+]

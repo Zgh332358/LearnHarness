@@ -1,0 +1,49 @@
+{
+  "space": 11,
+  "date": "2026-10-07",
+  "successful_operations": [
+    {
+      "case": "R01",
+      "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+      "target": "Step forward >",
+      "before": "对应range值0，其余3/67/10/10",
+      "action": "原生按钮点击一次",
+      "after": "对应range值1，其余保持；图显示访问编号和frontier格",
+      "screenshot_inspected": true,
+      "limits": "只验证该单步和可见图，不代表所有控件或教学效果",
+      "before_DOM_range_values": [
+        "3",
+        "0",
+        "67",
+        "10",
+        "10"
+      ],
+      "after_DOM_range_values": [
+        "3",
+        "1",
+        "67",
+        "10",
+        "10"
+      ],
+      "proof_type": "同一控件操作前后DOM值；截图检查辅助理解，并非配对截图证明"
+    }
+  ],
+  "blocked_checks": [
+    {
+      "case": "R03",
+      "stage": "load",
+      "result": "导航已提交，正文body未加载，无法操作单次/100次抽样"
+    },
+    {
+      "case": "R14",
+      "stage": "load/evaluate",
+      "result": "导航超时，页面不响应；执行过reload，随后关闭失去响应的p1，未验证控件"
+    },
+    {
+      "case": "R12",
+      "stage": "load",
+      "result": "在同一空间新建p2后导航提交但DOMContentLoaded超时，尚未验证按钮"
+    }
+  ],
+  "count_definition": "1项原站真实操作核验；研究的127条文字观察与100轮判断另外计数"
+}

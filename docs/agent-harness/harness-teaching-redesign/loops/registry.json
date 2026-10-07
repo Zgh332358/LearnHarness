@@ -1,0 +1,2758 @@
+{
+  "goal": "100 evidence-backed textbook comparison iterations",
+  "completed": 100,
+  "last_iteration": 100,
+  "next_phase": "implementation",
+  "baseline_sha256": "df8a67483766b816bdc27ec70dc45b28d24e090716be9ca1ec710d281e6a58b0",
+  "iterations": [
+    {
+      "n": 1,
+      "question": "教材的好坏先按什么标准选？",
+      "refs": [
+        "R02-O08",
+        "R09-O01"
+      ],
+      "analysis": "用户要读懂技术逻辑和定位。互动数量与画面复杂度都不能证明这一点，候选方法必须指向读者能完成的判断。",
+      "decision": "适配",
+      "change": "方法评估先写学习问题与可观察判断，再看控件与布局",
+      "next": "熟悉任务怎样进入真实技术对象？",
+      "previous_iteration": 0,
+      "previous_state": "需求基线与16案例观察已建立",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O08",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】2024 补记强调公开可改的事实、假设与计算。"
+        },
+        {
+          "id": "R09-O01",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html",
+          "observation": "Vectors 开头把要会的操作、要认识的图和词汇分列在学习目标中。"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "question": "熟悉任务怎样进入真实技术对象？",
+      "refs": [
+        "R13-O04",
+        "R16-O01"
+      ],
+      "analysis": "生活场景可以降低入门门槛，但只讲故事会继续遮蔽技术。例子之后必须立刻展示实际输入字段和程序操作。",
+      "decision": "适配",
+      "change": "统一用聚餐查询开场，随即给目标、约束、工具说明等可指认数据",
+      "next": "是否需要先展示抽象的系统总图？",
+      "previous_iteration": 1,
+      "previous_state": "方法评估先写学习问题与可观察判断，再看控件与布局",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O04",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "注意力段从翻译等动作过渡到查询、分数与归一化。"
+        },
+        {
+          "id": "R16-O01",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章从手机输入建议进入文本预测与训练材料的问题。"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "question": "是否需要先展示抽象的系统总图？",
+      "refs": [
+        "R13-O01",
+        "R13-O06"
+      ],
+      "analysis": "能力概览有助定位，完整复杂图却会要求新读者同时理解所有术语。先提供可读的职责位置，再随运行展开。",
+      "decision": "适配",
+      "change": "总图只回答谁负责什么，详细分支随后逐步出现",
+      "next": "哪些图形是机制所必需的？",
+      "previous_iteration": 2,
+      "previous_state": "统一用聚餐查询开场，随即给目标、约束、工具说明等可指认数据",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O01",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "开篇用四个能力说明分别链接四类扩展。"
+        },
+        {
+          "id": "R13-O06",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "可变计算段先提完整三步图，再逐项解释状态、停止权重和预算。"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "question": "哪些图形是机制所必需的？",
+      "refs": [
+        "R04-O03",
+        "R09-O02"
+      ],
+      "analysis": "齿轮的形状可解释运动，Harness没有天然空间几何。立体盒子增加视角负担，没有说明数据和控制的含义。",
+      "decision": "拒绝强制空间化",
+      "change": "采用平面节点、带动作说明的箭头、阶段数据表；不使用装饰3D",
+      "next": "视觉效果改变与机制改变怎样区分？",
+      "previous_iteration": 3,
+      "previous_state": "总图只回答谁负责什么，详细分支随后逐步出现",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R04-O03",
+          "url": "https://ciechanow.ski/gears/",
+          "observation": "【观察：页面文本】圆盘段明确用简单盘形替代会遮蔽特征的风扇形状。"
+        },
+        {
+          "id": "R09-O02",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-9",
+          "observation": "小节先区分点和箭头，再进入向量加法、缩放与线性组合。"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "question": "视觉效果改变与机制改变怎样区分？",
+      "refs": [
+        "R01-O02",
+        "R02-O08"
+      ],
+      "analysis": "Red Blob明确区分表面地图与计算表示；教程同样需要判断某次操作是阅读呈现变化，还是模拟规则变化。",
+      "decision": "适配",
+      "change": "换页、展开只标阅读控制；实验参数必须标所改变的运行条件",
+      "next": "原页存在控件能否算已经验证？",
+      "previous_iteration": 4,
+      "previous_state": "采用平面节点、带动作说明的箭头、阶段数据表；不使用装饰3D",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R01-O02",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】地图段有切换另一张地图的按钮，并说明底层图相同。"
+        },
+        {
+          "id": "R02-O08",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】2024 补记强调公开可改的事实、假设与计算。"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "question": "原页存在控件能否算已经验证？",
+      "refs": [
+        "R11-O03",
+        "R03-O02"
+      ],
+      "analysis": "原作者的操作说明能支持方法研究，不能支持当前浏览器确实响应。部分旧教材可能失效或资源未加载。",
+      "decision": "分开记录证据",
+      "change": "案例记录文字观察，独立操作记录前值、动作、后值与失败，不互相替代",
+      "next": "原页单步控制实际揭示什么？",
+      "previous_iteration": 5,
+      "previous_state": "换页、展开只标阅读控制；实验参数必须标所改变的运行条件",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R11-O03",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 说明可跳到某一步，并前后浏览执行过程。"
+        },
+        {
+          "id": "R03-O02",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】硬币实验提供一次翻转与一百次翻转选项。"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "question": "原页单步控制实际揭示什么？",
+      "refs": [
+        "R01-O04",
+        "R14-O01"
+      ],
+      "analysis": "已操作Red Blob：点击Step forward使对应步值0→1，图中的访问编号可见。价值是读者能停在确定阶段检查对象。",
+      "decision": "采用离散步进",
+      "change": "Harness单步必须同时显示阶段名称、当前数据与负责主体；不能只点亮节点",
+      "next": "教学中的回退应如何定义？",
+      "previous_iteration": 6,
+      "previous_state": "案例记录文字观察，独立操作记录前值、动作、后值与失败，不互相替代",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R01-O04",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】搜索过程用访问编号，并要求逐步查看扩展。"
+        },
+        {
+          "id": "R14-O01",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "页面提供重置、播放、暂停和下一步，并列显示 Epoch。"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "question": "教学中的回退应如何定义？",
+      "refs": [
+        "R04-O04",
+        "R11-O03"
+      ],
+      "analysis": "回看历史截图或执行轨迹属于阅读控制，不代表真实系统撤销。Agent工具可能已经改变外部世界。",
+      "decision": "适配并加边界",
+      "change": "按钮用回看上一步／重新演示，近旁说明模拟记录回放不会撤销外部操作",
+      "next": "为什么不把原教材实验台全部搬来？",
+      "previous_iteration": 7,
+      "previous_state": "Harness单步必须同时显示阶段名称、当前数据与负责主体；不能只点亮节点",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R04-O04",
+          "url": "https://ciechanow.ski/gears/",
+          "observation": "【观察：页面文本】圆盘例允许用滑杆前后控制时间，并留下路径与展开弧。"
+        },
+        {
+          "id": "R11-O03",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 说明可跳到某一步，并前后浏览执行过程。"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "question": "为什么不把原教材实验台全部搬来？",
+      "refs": [
+        "R14-O08",
+        "R02-O04"
+      ],
+      "analysis": "六个联动视图或复杂网络参数适合相应课题，却会让本读者先学界面。主线只需回答一个因果问题。",
+      "decision": "删减控件",
+      "change": "每个交互限定一项学习目标，优先一个条件、两个对照或离散步骤",
+      "next": "静态正文是否仍必须完整？",
+      "previous_iteration": 8,
+      "previous_state": "按钮用回看上一步／重新演示，近旁说明模拟记录回放不会撤销外部操作",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O08",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "作者提供隐藏可见功能并保存特定课题链接的说明。"
+        },
+        {
+          "id": "R02-O04",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者说明滤波器同时有六种表示，共同响应参数。"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "question": "静态正文是否仍必须完整？",
+      "refs": [
+        "R02-O06",
+        "R13-O07"
+      ],
+      "analysis": "读者可能不用交互、打印或在脚本失效时阅读。核心技术解释若仅藏在动画里，文档就不完整。",
+      "decision": "保留完整正文",
+      "change": "所有交互配静态示例和关系说明；图不承担唯一解释，模拟省略项就近注明",
+      "next": "互动示例是否要随机生成？",
+      "previous_iteration": 9,
+      "previous_state": "每个交互限定一项学习目标，优先一个条件、两个对照或离散步骤",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O06",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者要求静态解释成立，读者按自己的疑问再交互。"
+        },
+        {
+          "id": "R13-O07",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "程序生成段先用简化算术例子，再回到论文中的表格查询。"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "question": "互动示例是否要随机生成？",
+      "refs": [
+        "R14-O04",
+        "R08-O05"
+      ],
+      "analysis": "随机起点会使前后差异难归因。演示机制时需要固定事实，统计可靠性才需要重复样本。",
+      "decision": "固定教学样例",
+      "change": "默认数据固定，重复演示结果可解释；不把100轮研究或模拟计为真实可靠性实验",
+      "next": "控制条件该选连续滑杆还是离散选项？",
+      "previous_iteration": 10,
+      "previous_state": "所有交互配静态示例和关系说明；图不承担唯一解释，模拟省略项就近注明",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O04",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "数据区有 Regenerate 按钮。"
+        },
+        {
+          "id": "R08-O05",
+          "url": "https://ncase.me/polygons/",
+          "observation": "要求同一模拟多跑几次。"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "question": "控制条件该选连续滑杆还是离散选项？",
+      "refs": [
+        "R03-O03",
+        "R16-O02"
+      ],
+      "analysis": "概率或时间本身连续才适合滑杆；授权、超时、状态未知是明确分支，滑杆反而伪造连续关系。",
+      "decision": "按数据类型选择",
+      "change": "阶段用步骤按钮；权限、结果状态用离散选项；不设虚构能力分数滑杆",
+      "next": "前后变化应该显示哪些不变项？",
+      "previous_iteration": 11,
+      "previous_state": "默认数据固定，重复演示结果可解释；不把100轮研究或模拟计为真实可靠性实验",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O03",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】硬币说明可拖动右侧蓝色概率条，改变硬币权重。"
+        },
+        {
+          "id": "R16-O02",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "作者让读者选择账号和文本，用滑杆改变文本位置。"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "question": "前后变化应该显示哪些不变项？",
+      "refs": [
+        "R10-O05",
+        "R16-O05"
+      ],
+      "analysis": "如果任务、模型与工具同时变化，读者不能定位原因。教材要明确保持相同任务只改一项条件。",
+      "decision": "采用受控对照",
+      "change": "对照框列固定目标和被改变条件，反馈指出只因此改变的检查或后续动作",
+      "next": "新概念应该一次增加多少？",
+      "previous_iteration": 12,
+      "previous_state": "阶段用步骤按钮；权限、结果状态用离散选项；不设虚构能力分数滑杆",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R10-O05",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "图 2.3 的不同状态图注强调向量位置改变后，方向和长度不变。"
+        },
+        {
+          "id": "R16-O05",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "第二块给同一文本并列展示四个来源模型的候选。"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "question": "新概念应该一次增加多少？",
+      "refs": [
+        "R06-O01",
+        "R13-O05"
+      ],
+      "analysis": "完全主线必须完整，但初次演示可先一轮查询，再增加反馈和停止分支，而不是一次展开所有异常。",
+      "decision": "渐进呈现",
+      "change": "主例按最小轮次→多轮→异常扩展，扩展仍沿同一对象和术语",
+      "next": "如何避免同一对象每章改名？",
+      "previous_iteration": 13,
+      "previous_state": "对照框列固定目标和被改变条件，反馈指出只因此改变的检查或后续动作",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R06-O01",
+          "url": "https://ncase.me/crowds/",
+          "observation": "目录依次增加传播规则。"
+        },
+        {
+          "id": "R13-O05",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "翻译示例对照单个摘要向量与逐词保留的信息。"
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "question": "如何避免同一对象每章改名？",
+      "refs": [
+        "R03-O01",
+        "R16-O08"
+      ],
+      "analysis": "稳定阅读方式减少重新学界面的负担。输入、模型输出、检查、执行、返回、记录在章节间应一致。",
+      "decision": "建立统一视觉语法",
+      "change": "同一职责使用相同名称与标记；不同机制不能只换标题而复用错误流程",
+      "next": "颜色是否足够说明状态？",
+      "previous_iteration": 14,
+      "previous_state": "主例按最小轮次→多轮→异常扩展，扩展仍沿同一对象和术语",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O01",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】本章用硬币、骰子、卡牌分别解释三种统计概念。"
+        },
+        {
+          "id": "R16-O08",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "后续 Friend Data 块重复账号、模型与文本选择控件。"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "question": "颜色是否足够说明状态？",
+      "refs": [
+        "R14-O07",
+        "R15-O07"
+      ],
+      "analysis": "多处颜色有不同意义容易误解，色觉与打印也会丢失编码。Harness更需要明确的状态文字。",
+      "decision": "文字为主颜色辅助",
+      "change": "每状态写明未执行／已返回／未知／待批准，图例统一；不使用混色表达复杂关系",
+      "next": "关系箭头是否可以只画方向？",
+      "previous_iteration": 15,
+      "previous_state": "同一职责使用相同名称与标记；不同机制不能只换标题而复用错误流程",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O07",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "正文分别说明数据点、连线和背景颜色所表示的量。"
+        },
+        {
+          "id": "R15-O07",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "合并关卡解释分支颜色及提交颜色混合所代表的关系。"
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "question": "关系箭头是否可以只画方向？",
+      "refs": [
+        "R07-O03",
+        "R15-O03"
+      ],
+      "analysis": "因果影响、数据发送、控制调用、授权检查是不同关系。没有说明的箭头只制造似懂非懂。",
+      "decision": "标动作与对象",
+      "change": "箭头附近标发送本轮输入、提出请求、调用工具、返回结果或更新记录；权限用检查框",
+      "next": "通用职责图能否代表每个产品部署？",
+      "previous_iteration": 16,
+      "previous_state": "每状态写明未执行／已返回／未知／待批准，图例统一；不使用混色表达复杂关系",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R07-O03",
+          "url": "https://ncase.me/loopy/",
+          "observation": "建模入口用圆和箭头描述。"
+        },
+        {
+          "id": "R15-O03",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "第一关用 C0、C1 标识提交，解释箭头表示祖先关系。"
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "question": "通用职责图能否代表每个产品部署？",
+      "refs": [
+        "R13-O08",
+        "R07-O07"
+      ],
+      "analysis": "不同实现可能把职责放客户端、服务端或SDK内。教学图需表明是职责模型，而非某产品部署实况。",
+      "decision": "限制概括范围",
+      "change": "图注明逻辑职责与部署位置可以不同；具体产品位置另据官方资料解释",
+      "next": "术语解释应该放在哪里？",
+      "previous_iteration": 17,
+      "previous_state": "箭头附近标发送本轮输入、提出请求、调用工具、返回结果或更新记录；权限用检查框",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O08",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "图注区分据论文改写的图与直接引用的图。"
+        },
+        {
+          "id": "R07-O07",
+          "url": "https://ncase.me/loopy/",
+          "observation": "开头主动缩小工具作用承诺。"
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "question": "术语解释应该放在哪里？",
+      "refs": [
+        "R10-O07",
+        "R12-O01"
+      ],
+      "analysis": "让非技术读者来回查术语表会打断理解。首次出现时先说它具体负责什么，再给常用英文。",
+      "decision": "就近最低解释",
+      "change": "上下文、状态、工具请求等首次出现以作用+具体数据举例，附录负责回查",
+      "next": "研究教材的维护状态是否决定可用方法？",
+      "previous_iteration": 18,
+      "previous_state": "图注明逻辑职责与部署位置可以不同；具体产品位置另据官方资料解释",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R10-O07",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "定义长度后，正文把 scalar 解释为普通数字，并把具体长度计算延后。"
+        },
+        {
+          "id": "R12-O01",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "正文先把 event 解释为发生事情的信号，再列点击、按键、提交等具体事件。"
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "question": "研究教材的维护状态是否决定可用方法？",
+      "refs": [
+        "R03-O08",
+        "R02-O07"
+      ],
+      "analysis": "旧页面的交互可能不能运行，但明确的教学结构仍可分析；不能据旧网页承诺当下功能可用。",
+      "decision": "方法与现状分开",
+      "change": "记录教材归档和加载限制；只迁移已读明的教学原则，控件可用性须单独核查",
+      "next": "一章的入口该交代哪些内容？",
+      "previous_iteration": 19,
+      "previous_state": "上下文、状态、工具请求等首次出现以作用+具体数据举例，附录负责回查",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O08",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】章末提供下载与下一章入口，页面也列章节导航。"
+        },
+        {
+          "id": "R02-O07",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】资料核查例给出指词、按 W、输入查询词的操作。"
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "question": "一章的入口该交代哪些内容？",
+      "refs": [
+        "R09-O01",
+        "R15-O01"
+      ],
+      "analysis": "目录标题说明主题，但不能告诉读者读完能判断什么。需要用具体问题与动作定义学习目标。",
+      "decision": "采用章节导学",
+      "change": "章首写本章问题、读完能指出的关系和所需前置概念",
+      "next": "正文与图谁先出现？",
+      "previous_iteration": 20,
+      "previous_state": "记录教材归档和加载限制；只迁移已读明的教学原则，控件可用性须单独核查",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O01",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html",
+          "observation": "Vectors 开头把要会的操作、要认识的图和词汇分列在学习目标中。"
+        },
+        {
+          "id": "R15-O01",
+          "url": "https://learngitbranching.js.org/?locale=en",
+          "observation": "欢迎页分别建议初学者从第一关开始，熟悉者选择后续关卡。"
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "question": "正文与图谁先出现？",
+      "refs": [
+        "R09-O04",
+        "R13-O06"
+      ],
+      "analysis": "图无对象介绍会难读，长文字后才有图又难关联。先说明对象和问题，紧接图，再解释变化。",
+      "decision": "图文相邻",
+      "change": "每张图前有看图任务，图后有关键关系的文字解释，不将图集中在附录",
+      "next": "图与表各自承担什么？",
+      "previous_iteration": 21,
+      "previous_state": "章首写本章问题、读完能指出的关系和所需前置概念",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O04",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-10",
+          "observation": "平行四边形加法、减法、缩放各自紧接对应解释出现交互示例入口。"
+        },
+        {
+          "id": "R13-O06",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "可变计算段先提完整三步图，再逐项解释状态、停止权重和预算。"
+        }
+      ]
+    },
+    {
+      "n": 23,
+      "question": "图与表各自承担什么？",
+      "refs": [
+        "R09-O03",
+        "R11-O04"
+      ],
+      "analysis": "关系图擅长表示职责和流向，数据表擅长给准确字段。两者应描述同一对象，而不是两套概念。",
+      "decision": "双表示但不堆叠",
+      "change": "图回答谁向谁做什么，附近数据表回答实际传了什么；保持对象编号对应",
+      "next": "模型输出内容是否应该直接放在流程箭头上？",
+      "previous_iteration": 22,
+      "previous_state": "每张图前有看图任务，图后有关键关系的文字解释，不将图集中在附录",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O03",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-10",
+          "observation": "Vector Algebra and Geometry 同时解释数字运算与几何构造，而非另建一套图像概念。"
+        },
+        {
+          "id": "R11-O04",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 分别描述调用栈中的局部变量和堆中的对象及指向关系。"
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "question": "模型输出内容是否应该直接放在流程箭头上？",
+      "refs": [
+        "R13-O02",
+        "R12-O05"
+      ],
+      "analysis": "一条箭头塞整段JSON难读，却只写输出又太抽象。应将动作标签与数据内容分开。",
+      "decision": "分层呈现字段",
+      "change": "箭头只写动作，节点旁显示工具名与必要参数，完整协议可展开",
+      "next": "应该把图画成时间线还是架构图？",
+      "previous_iteration": 23,
+      "previous_state": "图回答谁向谁做什么，附近数据表回答实际传了什么；保持对象编号对应",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O02",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "外部记忆段先说明记忆是向量数组，再解释读写。"
+        },
+        {
+          "id": "R12-O05",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "Event object 示例展示事件类型、处理元素和点击坐标，并逐项解释字段。"
+        }
+      ]
+    },
+    {
+      "n": 25,
+      "question": "应该把图画成时间线还是架构图？",
+      "refs": [
+        "R14-O02",
+        "R10-O03"
+      ],
+      "analysis": "固定职责关系与先后事件是不同问题。时间线解释一轮发生顺序，架构图解释职责放在哪里。",
+      "decision": "分别回答两个问题",
+      "change": "运行演示用编号步骤，架构位置用职责分区，不让横向位置同时暗示部署与时间",
+      "next": "任务约束怎样持续可见？",
+      "previous_iteration": 24,
+      "previous_state": "箭头只写动作，节点旁显示工具名与必要参数，完整协议可展开",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O02",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "主界面区分 Data、Features、神经网络与 Output。"
+        },
+        {
+          "id": "R10-O03",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "图 2.5 的各阶段图注分别解释移动向量、构造和、交换构造顺序。"
+        }
+      ]
+    },
+    {
+      "n": 26,
+      "question": "任务约束怎样持续可见？",
+      "refs": [
+        "R15-O08",
+        "R07-O01"
+      ],
+      "analysis": "反复回翻前文会使读者遗忘为何停止或追问。交互旁应保留简短目标卡，完整目标仍可查看。",
+      "decision": "目标就近可回查",
+      "change": "显示人数、预算、时间、只查询等关键约束，并给查看完整任务入口",
+      "next": "长协议块如何安排才不破坏主线？",
+      "previous_iteration": 25,
+      "previous_state": "运行演示用编号步骤，架构位置用职责分区，不让横向位置同时暗示部署与时间",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R15-O08",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "合并关卡提示可用 objective 重新显示要求。"
+        },
+        {
+          "id": "R07-O01",
+          "url": "https://ncase.me/loopy/",
+          "observation": "简介分成三个动词主题。"
+        }
+      ]
+    },
+    {
+      "n": 27,
+      "question": "长协议块如何安排才不破坏主线？",
+      "refs": [
+        "R12-O06",
+        "R09-O07"
+      ],
+      "analysis": "协议细节值得保留，但第一次理解请求和执行不需要全部字段。核心动作和授权不能折叠。",
+      "decision": "按需细节",
+      "change": "主线保留工具名、参数、请求编号、结果关系；可选深读展示完整JSON和接口差异",
+      "next": "折叠内容能否承担关键结论？",
+      "previous_iteration": 26,
+      "previous_state": "显示人数、预算、时间、只查询等关键约束，并给查看完整任务入口",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O06",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "addEventListener 的 options 列表解释基本用途，把捕获和默认行为链接到后续章节。"
+        },
+        {
+          "id": "R09-O07",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-9",
+          "observation": "点与向量解释后，符号习惯放在 Remark，另一种理解放在 Note。"
+        }
+      ]
+    },
+    {
+      "n": 28,
+      "question": "折叠内容能否承担关键结论？",
+      "refs": [
+        "R02-O06",
+        "R06-O07"
+      ],
+      "analysis": "如果失败、未知、未授权藏在折叠里，默认阅读会形成错误机制。可折叠的是延伸证明与细节。",
+      "decision": "约束折叠范围",
+      "change": "每章默认正文完整说明技术分界、分支与结论；展开区域不改变基本含义",
+      "next": "示例编号能帮助哪些阅读动作？",
+      "previous_iteration": 27,
+      "previous_state": "主线保留工具名、参数、请求编号、结果关系；可选深读展示完整JSON和接口差异",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O06",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者要求静态解释成立，读者按自己的疑问再交互。"
+        },
+        {
+          "id": "R06-O07",
+          "url": "https://ncase.me/crowds/",
+          "observation": "注释明确列出简化假设。"
+        }
+      ]
+    },
+    {
+      "n": 29,
+      "question": "示例编号能帮助哪些阅读动作？",
+      "refs": [
+        "R15-O03",
+        "R01-O05"
+      ],
+      "analysis": "编号能让结果与请求配对，也能反查下一轮用了哪项事实。编号本身不保证业务去重。 教材引用支持展现方法；技术规则依据本指南相关章节的官方资料。",
+      "decision": "稳定编号",
+      "change": "示例请求Q1与结果R1配对，输入引用R1；另行解释call_id不等于幂等键",
+      "next": "当前状态和累积记录如何排列？",
+      "previous_iteration": 28,
+      "previous_state": "每章默认正文完整说明技术分界、分支与结论；展开区域不改变基本含义",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R15-O03",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "第一关用 C0、C1 标识提交，解释箭头表示祖先关系。"
+        },
+        {
+          "id": "R01-O05",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】回溯段要求移动终点，沿保存的箭头返回起点。"
+        }
+      ]
+    },
+    {
+      "n": 30,
+      "question": "当前状态和累积记录如何排列？",
+      "refs": [
+        "R11-O02",
+        "R11-O05"
+      ],
+      "analysis": "当前阶段的输入与截至此时的记录不能只展示最终结果。未来结果提前出现会混淆信息因果。",
+      "decision": "同一时点同步显示",
+      "change": "步进同时更新当前阶段、已知事实、事件记录；未发生的结果明确为尚未获得",
+      "next": "模型上下文与保存状态怎样在图上区分？",
+      "previous_iteration": 29,
+      "previous_state": "示例请求Q1与结果R1配对，输入引用R1；另行解释call_id不等于幂等键",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R11-O02",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "官方 Demo 按编号解释某一步正在运行的代码行，以及对应栈帧与堆对象。"
+        },
+        {
+          "id": "R11-O05",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 另列截至该步已经打印的内容，而非只展示最终输出。"
+        }
+      ]
+    },
+    {
+      "n": 31,
+      "question": "模型上下文与保存状态怎样在图上区分？",
+      "refs": [
+        "R13-O02",
+        "R11-O04"
+      ],
+      "analysis": "保存在系统里的记录不等于本轮已发送给模型。图需显示两个容器及选择、取回动作，而非泛称记忆。",
+      "decision": "分区并显示发送边界",
+      "change": "本轮输入单与保存记录表分开，选择进入输入的条目被明确列出",
+      "next": "任务摘要该如何展示信息损失？",
+      "previous_iteration": 30,
+      "previous_state": "步进同时更新当前阶段、已知事实、事件记录；未发生的结果明确为尚未获得",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O02",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "外部记忆段先说明记忆是向量数组，再解释读写。"
+        },
+        {
+          "id": "R11-O04",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 分别描述调用栈中的局部变量和堆中的对象及指向关系。"
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "question": "任务摘要该如何展示信息损失？",
+      "refs": [
+        "R01-O03",
+        "R13-O05"
+      ],
+      "analysis": "摘要改变表示并可能遗漏。不能像等价地图转换一样承诺原意完全保持。",
+      "decision": "适配并暴露遗漏",
+      "change": "对照原目标与摘要，标出预算、禁忌、只查询是否保留，缺项时说明后果",
+      "next": "怎样图解权限边界而不拟人化？",
+      "previous_iteration": 31,
+      "previous_state": "本轮输入单与保存记录表分开，选择进入输入的条目被明确列出",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R01-O03",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】页面提供门作为边和网格表示的切换选项。"
+        },
+        {
+          "id": "R13-O05",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "翻译示例对照单个摘要向量与逐词保留的信息。"
+        }
+      ]
+    },
+    {
+      "n": 33,
+      "question": "怎样图解权限边界而不拟人化？",
+      "refs": [
+        "R08-O01",
+        "R12-O04"
+      ],
+      "analysis": "可行动条件应是显式程序检查。让模型说我谨慎不能代替权限门槛。",
+      "decision": "画检查而非人格",
+      "change": "请求之后、执行之前显示格式／语义／权限检查，并单列拒绝理由",
+      "next": "如何表示工具正常但任务未达成？",
+      "previous_iteration": 32,
+      "previous_state": "对照原目标与摘要，标出预算、禁忌、只查询是否保留，缺项时说明后果",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R08-O01",
+          "url": "https://ncase.me/polygons/",
+          "observation": "只允许移动不满意的形状。"
+        },
+        {
+          "id": "R12-O04",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "Possible mistakes 把函数引用与带括号的立即调用相邻对照，并解释后果。"
+        }
+      ]
+    },
+    {
+      "n": 34,
+      "question": "如何表示工具正常但任务未达成？",
+      "refs": [
+        "R14-O06",
+        "R16-O07"
+      ],
+      "analysis": "工具HTTP成功、数据返回、满足聚餐条件是不同判断，一个绿色成功会掩盖甲已满与丙未知。",
+      "decision": "分开状态指标",
+      "change": "结果卡同时列执行状态、返回事实、业务可用性和未知项",
+      "next": "未知结果应使用怎样的文字与图形？",
+      "previous_iteration": 33,
+      "previous_state": "请求之后、执行之前显示格式／语义／权限检查，并单列拒绝理由",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O06",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "输出区分别列 Training loss 和 Test loss。"
+        },
+        {
+          "id": "R16-O07",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章给一个跨来源预测更好的个例，说明通常规律不是硬规则。"
+        }
+      ]
+    },
+    {
+      "n": 35,
+      "question": "未知结果应使用怎样的文字与图形？",
+      "refs": [
+        "R03-O06",
+        "R16-O04"
+      ],
+      "analysis": "未知不能假扮真实值或失败。丙空位未知与已满需要不同标签与不同后续动作。",
+      "decision": "未知独立状态",
+      "change": "显示已知／未知字段；继续查证、追问、报告限制的选择由证据支持",
+      "next": "对照图需要几列？",
+      "previous_iteration": 34,
+      "previous_state": "结果卡同时列执行状态、返回事实、业务可用性和未知项",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O06",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】方差说明将运行估计标绿色、真实方差标蓝色。"
+        },
+        {
+          "id": "R16-O04",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章说明缺少相似词组的局限，再引入频繁词与前缀限制。"
+        }
+      ]
+    },
+    {
+      "n": 36,
+      "question": "对照图需要几列？",
+      "refs": [
+        "R16-O05",
+        "R02-O04"
+      ],
+      "analysis": "四到六列适合原作者的研究对象，但对本读者会增加扫描。两个条件通常足够展示关键差别。",
+      "decision": "默认二列或上下对照",
+      "change": "只比较缺少反馈／加入反馈、允许／未允许等关键差别，手机上下排列",
+      "next": "图例与来源放页尾是否足够？",
+      "previous_iteration": 35,
+      "previous_state": "显示已知／未知字段；继续查证、追问、报告限制的选择由证据支持",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R16-O05",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "第二块给同一文本并列展示四个来源模型的候选。"
+        },
+        {
+          "id": "R02-O04",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者说明滤波器同时有六种表示，共同响应参数。"
+        }
+      ]
+    },
+    {
+      "n": 37,
+      "question": "图例与来源放页尾是否足够？",
+      "refs": [
+        "R13-O08",
+        "R14-O07"
+      ],
+      "analysis": "图例和教学归纳身份影响即时理解，应贴近图。参考列表负责更深查证，不代替局部说明。",
+      "decision": "就近标注",
+      "change": "每图注明箭头关系、教学简化和相关来源，正文后仍保留完整来源索引",
+      "next": "纯文本时怎样替代图？",
+      "previous_iteration": 36,
+      "previous_state": "只比较缺少反馈／加入反馈、允许／未允许等关键差别，手机上下排列",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O08",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "图注区分据论文改写的图与直接引用的图。"
+        },
+        {
+          "id": "R14-O07",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "正文分别说明数据点、连线和背景颜色所表示的量。"
+        }
+      ]
+    },
+    {
+      "n": 38,
+      "question": "纯文本时怎样替代图？",
+      "refs": [
+        "R02-O06",
+        "R09-O03"
+      ],
+      "analysis": "截图替代不了可复制阅读与辅助技术。关键关系应有顺序文字、表头和可读对象名称。",
+      "decision": "静态语义回退",
+      "change": "每图配一句完整关系说明；交互配默认示例表；禁止只写如图所示",
+      "next": "大篇幅文档如何维持阅读位置？",
+      "previous_iteration": 37,
+      "previous_state": "每图注明箭头关系、教学简化和相关来源，正文后仍保留完整来源索引",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O06",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者要求静态解释成立，读者按自己的疑问再交互。"
+        },
+        {
+          "id": "R09-O03",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-10",
+          "observation": "Vector Algebra and Geometry 同时解释数字运算与几何构造，而非另建一套图像概念。"
+        }
+      ]
+    },
+    {
+      "n": 39,
+      "question": "大篇幅文档如何维持阅读位置？",
+      "refs": [
+        "R02-O07",
+        "R03-O08"
+      ],
+      "analysis": "用户需要全面内容，不能靠删掉深度换短页面。章内锚点与章节分页可以降低导航成本。",
+      "decision": "保留完整内容配导航",
+      "change": "当前章、上一章下一章、章内小节入口明确；深链接刷新仍回到目标位置",
+      "next": "每一段都做卡片会不会更清晰？",
+      "previous_iteration": 38,
+      "previous_state": "每图配一句完整关系说明；交互配默认示例表；禁止只写如图所示",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O07",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】资料核查例给出指词、按 W、输入查询词的操作。"
+        },
+        {
+          "id": "R03-O08",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】章末提供下载与下一章入口，页面也列章节导航。"
+        }
+      ]
+    },
+    {
+      "n": 40,
+      "question": "每一段都做卡片会不会更清晰？",
+      "refs": [
+        "R09-O07",
+        "R12-O02"
+      ],
+      "analysis": "独立块适合说明、例子与实验边界，不适合把连续论证切成碎片。阅读主线应保持正文流。",
+      "decision": "限制卡片数量",
+      "change": "卡片仅用于目标、示例、关键图、互动、易错点；长解释使用正常段落",
+      "next": "单步到底推进哪一种事件？",
+      "previous_iteration": 39,
+      "previous_state": "当前章、上一章下一章、章内小节入口明确；深链接刷新仍回到目标位置",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O07",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-9",
+          "observation": "点与向量解释后，符号习惯放在 Remark，另一种理解放在 Note。"
+        },
+        {
+          "id": "R12-O02",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "首个最短示例的 HTML 带运行、打开 sandbox 入口；同类示例结果 iframe 与代码相邻。"
+        }
+      ]
+    },
+    {
+      "n": 41,
+      "question": "单步到底推进哪一种事件？",
+      "refs": [
+        "R10-O04",
+        "R14-O01"
+      ],
+      "analysis": "一轮模型调用内可能有多个程序步骤；一次点击也可能只是看记录。必须说明教学步与真实调用次数不是同一量。",
+      "decision": "明确步的单位",
+      "change": "步骤标签区分输入组装、模型输出、检查、工具执行、返回、下一轮输入，不虚增模型调用",
+      "next": "开始演示之前必须先给什么？",
+      "previous_iteration": 40,
+      "previous_state": "卡片仅用于目标、示例、关键图、互动、易错点；长解释使用正常段落",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R10-O04",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "图 2.5 同时说明可拖动向量端点，并用 Forward 进入下一构造阶段。"
+        },
+        {
+          "id": "R14-O01",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "页面提供重置、播放、暂停和下一步，并列显示 Epoch。"
+        }
+      ]
+    },
+    {
+      "n": 42,
+      "question": "开始演示之前必须先给什么？",
+      "refs": [
+        "R07-O05",
+        "R15-O04"
+      ],
+      "analysis": "空白编辑器让读者先学操作，没有可理解对象。应先提供可运行的固定例与已知目标。",
+      "decision": "示范先于自由编辑",
+      "change": "默认聚餐查询样例已完整填入，读者先走一轮，再改变相关条件",
+      "next": "每步反馈是否只需要一句提示？",
+      "previous_iteration": 41,
+      "previous_state": "步骤标签区分输入组装、模型输出、检查、工具执行、返回、下一轮输入，不虚增模型调用",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R07-O05",
+          "url": "https://ncase.me/loopy/",
+          "observation": "先嵌示例，再给从零创建入口。"
+        },
+        {
+          "id": "R15-O04",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "首关演示一次 commit，再让读者自行做两次完成目标。"
+        }
+      ]
+    },
+    {
+      "n": 43,
+      "question": "每步反馈是否只需要一句提示？",
+      "refs": [
+        "R12-O05",
+        "R11-O02"
+      ],
+      "analysis": "一句进入下一步无法解释技术。需要展示本步谁处理什么及产生了哪些可观察对象。",
+      "decision": "反馈绑定数据",
+      "change": "反馈包含负责者、输入字段、输出或状态变化、该步不能证明的事项",
+      "next": "下一轮输入怎样证明用到了返回结果？",
+      "previous_iteration": 42,
+      "previous_state": "默认聚餐查询样例已完整填入，读者先走一轮，再改变相关条件",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O05",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "Event object 示例展示事件类型、处理元素和点击坐标，并逐项解释字段。"
+        },
+        {
+          "id": "R11-O02",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "官方 Demo 按编号解释某一步正在运行的代码行，以及对应栈帧与堆对象。"
+        }
+      ]
+    },
+    {
+      "n": 44,
+      "question": "下一轮输入怎样证明用到了返回结果？",
+      "refs": [
+        "R16-O03",
+        "R01-O05"
+      ],
+      "analysis": "只画循环箭头看不到反馈内容。应让读者指认新加入的结果和据此发生的下一步。",
+      "decision": "显示引用证据",
+      "change": "下一轮输入标新增R1及其已满事实，后续查询引用该事实；不编造模型内隐推理",
+      "next": "控制自动播放能帮助第一次理解吗？",
+      "previous_iteration": 43,
+      "previous_state": "反馈包含负责者、输入字段、输出或状态变化、该步不能证明的事项",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R16-O03",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "候选词旁列出历史中最匹配的词组。"
+        },
+        {
+          "id": "R01-O05",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】回溯段要求移动终点，沿保存的箭头返回起点。"
+        }
+      ]
+    },
+    {
+      "n": 45,
+      "question": "控制自动播放能帮助第一次理解吗？",
+      "refs": [
+        "R05-O05",
+        "R08-O03"
+      ],
+      "analysis": "连续播放容易错过输入和结果，且需要额外节奏控制。用户要简单易懂，默认手动更合适。",
+      "decision": "默认手动",
+      "change": "核心实验只用上一步下一步和重演；如有动画只作短过渡且可减少",
+      "next": "单条件对照怎样避免暗中更换事实？",
+      "previous_iteration": 44,
+      "previous_state": "下一轮输入标新增R1及其已满事实，后续查询引用该事实；不编造模型内隐推理",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R05-O05",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "文字列出启动、单步与重置控制。"
+        },
+        {
+          "id": "R08-O03",
+          "url": "https://ncase.me/polygons/",
+          "observation": "先手动移动，再自动运行。"
+        }
+      ]
+    },
+    {
+      "n": 46,
+      "question": "单条件对照怎样避免暗中更换事实？",
+      "refs": [
+        "R05-O06",
+        "R16-O05"
+      ],
+      "analysis": "改变权限应只改变是否执行，不该同时修改餐厅可订事实；改变结果则不该自动修改用户目标。",
+      "decision": "显式锁定其他条件",
+      "change": "每次实验列唯一变项，固定项保持；反馈分别解释模型、程序、外部状态的边界",
+      "next": "输入选择实验选哪些数据最有教学价值？",
+      "previous_iteration": 45,
+      "previous_state": "核心实验只用上一步下一步和重演；如有动画只作短过渡且可减少",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R05-O06",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "分别改变轮数、收益、误差率。"
+        },
+        {
+          "id": "R16-O05",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "第二块给同一文本并列展示四个来源模型的候选。"
+        }
+      ]
+    },
+    {
+      "n": 47,
+      "question": "输入选择实验选哪些数据最有教学价值？",
+      "refs": [
+        "R03-O07",
+        "R13-O02"
+      ],
+      "analysis": "读者手动选择只是模拟上下文组装，实际Harness会按策略选择。任务约束、最新结果、过期信息可展示区别。",
+      "decision": "限定选择集合",
+      "change": "输入选择实验只给少量已标来源的记录，显示已保存但未发送与本轮已发送",
+      "next": "漏掉一项信息后该如何反馈？",
+      "previous_iteration": 46,
+      "previous_state": "每次实验列唯一变项，固定项保持；反馈分别解释模型、程序、外部状态的边界",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O07",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】卡牌实验让读者点选哪些卡进入牌组。"
+        },
+        {
+          "id": "R13-O02",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "外部记忆段先说明记忆是向量数组，再解释读写。"
+        }
+      ]
+    },
+    {
+      "n": 48,
+      "question": "漏掉一项信息后该如何反馈？",
+      "refs": [
+        "R12-O04",
+        "R15-O05"
+      ],
+      "analysis": "遗漏预算只能说明模型本轮缺少明确预算依据，不能必然断言它推荐超预算。应描述信息风险与修正。",
+      "decision": "避免伪确定结果",
+      "change": "反馈指出缺失字段、可发生的偏差和应补回数据，不伪造固定模型心理或概率",
+      "next": "预测题是在考什么？",
+      "previous_iteration": 47,
+      "previous_state": "输入选择实验只给少量已标来源的记录，显示已保存但未发送与本轮已发送",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O04",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "Possible mistakes 把函数引用与带括号的立即调用相邻对照，并解释后果。"
+        },
+        {
+          "id": "R15-O05",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "分支例子先展示 main 变化而 newImage 未动，再解释当前分支并切换。"
+        }
+      ]
+    },
+    {
+      "n": 49,
+      "question": "预测题是在考什么？",
+      "refs": [
+        "R11-O08",
+        "R05-O03"
+      ],
+      "analysis": "预测系统可观察分支有规则依据，猜测模型下一句则不稳定。学习题要检验请求、执行、未知与结束分界。",
+      "decision": "考机制判断",
+      "change": "题目询问该阶段能确定什么、谁执行或该检查什么；不猜未公开思维过程",
+      "next": "答错反馈需要给分数吗？",
+      "previous_iteration": 48,
+      "previous_state": "反馈指出缺失字段、可发生的偏差和应补回数据，不伪造固定模型心理或概率",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R11-O08",
+          "url": "https://pythontutor.com/",
+          "observation": "官网教师栏目建议让学生猜测每步结果，再配合逐步可视化。"
+        },
+        {
+          "id": "R05-O03",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "先预测冠军，再逐场显示比分。"
+        }
+      ]
+    },
+    {
+      "n": 50,
+      "question": "答错反馈需要给分数吗？",
+      "refs": [
+        "R05-O07",
+        "R12-O07"
+      ],
+      "analysis": "分数不解释错因。每个选项应对应具体误解，并引用当前状态给修正。",
+      "decision": "解释优于积分",
+      "change": "选择后指出该选项把哪两个阶段混同，给正确关系及回看入口，不加排名奖励",
+      "next": "提交前还能修改哪些条件？",
+      "previous_iteration": 49,
+      "previous_state": "题目询问该阶段能确定什么、谁执行或该检查什么；不猜未公开思维过程",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R05-O07",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "对预测结果准备差异化反馈。"
+        },
+        {
+          "id": "R12-O07",
+          "url": "https://javascript.info/introduction-browser-events#tasks",
+          "observation": "Tasks 先列目标、演示与任务 sandbox，后给 solution 按钮及解答入口。"
+        }
+      ]
+    },
+    {
+      "n": 51,
+      "question": "提交前还能修改哪些条件？",
+      "refs": [
+        "R06-O04",
+        "R10-O04"
+      ],
+      "analysis": "修改演示条件与推进事件应分开。提交的输入版本不应被后续操作静默覆盖，否则失去因果。",
+      "decision": "区分配置与执行",
+      "change": "改条件时明确重新演示或当前事件的适用范围；已提交记录保留原输入版本",
+      "next": "怎样演示未授权请求？",
+      "previous_iteration": 50,
+      "previous_state": "选择后指出该选项把哪两个阶段混同，给正确关系及回看入口，不加排名奖励",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R06-O04",
+          "url": "https://ncase.me/crowds/",
+          "observation": "运行前预测；运行时禁画线。"
+        },
+        {
+          "id": "R10-O04",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "图 2.5 同时说明可拖动向量端点，并用 Forward 进入下一构造阶段。"
+        }
+      ]
+    },
+    {
+      "n": 52,
+      "question": "怎样演示未授权请求？",
+      "refs": [
+        "R08-O01",
+        "R15-O02"
+      ],
+      "analysis": "工具在可用列表不代表用户已允许所有动作。只有查询权限时，订金请求应停在检查阶段。",
+      "decision": "可见拒绝分支",
+      "change": "展示允许查询／未允许支付的动作范围，拒绝后无执行事件，并给需要确认的事项",
+      "next": "查询超时和支付超时能否使用同一重试按钮？",
+      "previous_iteration": 51,
+      "previous_state": "改条件时明确重新演示或当前事件的适用范围；已提交记录保留原输入版本",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R08-O01",
+          "url": "https://ncase.me/polygons/",
+          "observation": "只允许移动不满意的形状。"
+        },
+        {
+          "id": "R15-O02",
+          "url": "https://learngitbranching.js.org/?locale=en",
+          "observation": "欢迎页提供 show commands 查看命令的入口说明。"
+        }
+      ]
+    },
+    {
+      "n": 53,
+      "question": "查询超时和支付超时能否使用同一重试按钮？",
+      "refs": [
+        "R04-O08",
+        "R16-O04"
+      ],
+      "analysis": "只读查询通常可按预算重试，支付可能已生效。教学不能将所有失败统一为再试一次。 教材引用支持展现方法；技术规则依据本指南相关章节的官方资料。",
+      "decision": "按副作用分支",
+      "change": "查询分支显示有限重试；支付结果未知分支先核对外部状态或幂等记录",
+      "next": "修改规则是否自动修复既有状态？",
+      "previous_iteration": 52,
+      "previous_state": "展示允许查询／未允许支付的动作范围，拒绝后无执行事件，并给需要确认的事项",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R04-O08",
+          "url": "https://ciechanow.ski/gears/",
+          "observation": "【观察：页面文本】摩擦盘的理想假设先被打滑打破，随后引入齿轮。"
+        },
+        {
+          "id": "R16-O04",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章说明缺少相似词组的局限，再引入频繁词与前缀限制。"
+        }
+      ]
+    },
+    {
+      "n": 54,
+      "question": "修改规则是否自动修复既有状态？",
+      "refs": [
+        "R08-O07",
+        "R07-O04"
+      ],
+      "analysis": "后来收紧权限或重试策略不会撤销已经支付的订金，也不能删除未知结果。",
+      "decision": "保留已发生事件",
+      "change": "配置变化只影响适用的后续动作，外部已执行与未知记录仍可见",
+      "next": "重置按钮重置哪些对象？",
+      "previous_iteration": 53,
+      "previous_state": "查询分支显示有限重试；支付结果未知分支先核对外部状态或幂等记录",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R08-O07",
+          "url": "https://ncase.me/polygons/",
+          "observation": "保持分隔初态，再降低偏好。"
+        },
+        {
+          "id": "R07-O04",
+          "url": "https://ncase.me/loopy/",
+          "observation": "修改他人模型被描述成对话。"
+        }
+      ]
+    },
+    {
+      "n": 55,
+      "question": "重置按钮重置哪些对象？",
+      "refs": [
+        "R05-O05",
+        "R14-O04"
+      ],
+      "analysis": "重置教学页面可以清空模拟选择和步数，但不能让读者以为业务操作可逆。",
+      "decision": "明确范围",
+      "change": "统一称重新演示，清空本地模拟状态；旁边写明示例不调用真实工具",
+      "next": "记录反查怎样避免跳出学习现场？",
+      "previous_iteration": 54,
+      "previous_state": "配置变化只影响适用的后续动作，外部已执行与未知记录仍可见",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R05-O05",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "文字列出启动、单步与重置控制。"
+        },
+        {
+          "id": "R14-O04",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "数据区有 Regenerate 按钮。"
+        }
+      ]
+    },
+    {
+      "n": 56,
+      "question": "记录反查怎样避免跳出学习现场？",
+      "refs": [
+        "R02-O07",
+        "R16-O03"
+      ],
+      "analysis": "当前判断依赖R1，读者应该在附近打开R1而不是在长文中搜索。局部证据比另开术语页更直接。",
+      "decision": "就近证据入口",
+      "change": "点击或键盘展开当前引用记录；保留阶段位置，关闭后继续阅读",
+      "next": "实验结束必须显示什么？",
+      "previous_iteration": 55,
+      "previous_state": "统一称重新演示，清空本地模拟状态；旁边写明示例不调用真实工具",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O07",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】资料核查例给出指词、按 W、输入查询词的操作。"
+        },
+        {
+          "id": "R16-O03",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "候选词旁列出历史中最匹配的词组。"
+        }
+      ]
+    },
+    {
+      "n": 57,
+      "question": "实验结束必须显示什么？",
+      "refs": [
+        "R15-O06",
+        "R06-O06"
+      ],
+      "analysis": "步骤走完仅代表模拟轨迹结束。需要交代哪些事实已确认、哪些未知、为什么现在停止或等待。",
+      "decision": "终点写成状态",
+      "change": "尾页给候选调查结果、未知项、只查询权限边界和任务验收结论",
+      "next": "等待用户是否等于失败？",
+      "previous_iteration": 56,
+      "previous_state": "点击或键盘展开当前引用记录；保留阶段位置，关闭后继续阅读",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R15-O06",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "分支与相对引用关卡写明应创建、切换或移动到的目标。"
+        },
+        {
+          "id": "R06-O06",
+          "url": "https://ncase.me/crowds/",
+          "observation": "反向任务要求阻止传播。"
+        }
+      ]
+    },
+    {
+      "n": 58,
+      "question": "等待用户是否等于失败？",
+      "refs": [
+        "R06-O06",
+        "R01-O06"
+      ],
+      "analysis": "有些任务需要用户批准或补充条件。系统主动等待可以是正确控制，而非红色失败。",
+      "decision": "等待独立结局",
+      "change": "停止图列完成、等待信息/批准、可恢复错误、预算终止，分别给原因",
+      "next": "自动继续应该在什么条件下停止？",
+      "previous_iteration": 57,
+      "previous_state": "尾页给候选调查结果、未知项、只查询权限边界和任务验收结论",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R06-O06",
+          "url": "https://ncase.me/crowds/",
+          "observation": "反向任务要求阻止传播。"
+        },
+        {
+          "id": "R01-O06",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】提前停止段并列有无早停，并给出停止条件。"
+        }
+      ]
+    },
+    {
+      "n": 59,
+      "question": "自动继续应该在什么条件下停止？",
+      "refs": [
+        "R01-O06",
+        "R05-O06"
+      ],
+      "analysis": "继续循环不一定有价值。缺少新信息、权限、时间或预算时应退出当前运行，不让动画无限转圈。",
+      "decision": "显示运行边界",
+      "change": "演示给有限步骤和明确停止理由；次数上限只是控制条件，不当作正确性的保证",
+      "next": "一个交互同时解释多种机制是否合适？",
+      "previous_iteration": 58,
+      "previous_state": "停止图列完成、等待信息/批准、可恢复错误、预算终止，分别给原因",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R01-O06",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】提前停止段并列有无早停，并给出停止条件。"
+        },
+        {
+          "id": "R05-O06",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "分别改变轮数、收益、误差率。"
+        }
+      ]
+    },
+    {
+      "n": 60,
+      "question": "一个交互同时解释多种机制是否合适？",
+      "refs": [
+        "R14-O08",
+        "R05-O08"
+      ],
+      "analysis": "一次展示权限、摘要、重试、多Agent和成本会失去主问题。完整内容可以分章节，但控件应按目的限定。",
+      "decision": "拆学习问题",
+      "change": "每实验写唯一主问题，扩展资料按需读；不增设通用万能沙盒",
+      "next": "先做再讲与先讲再做如何取舍？",
+      "previous_iteration": 59,
+      "previous_state": "演示给有限步骤和明确停止理由；次数上限只是控制条件，不当作正确性的保证",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O08",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "作者提供隐藏可见功能并保存特定课题链接的说明。"
+        },
+        {
+          "id": "R05-O08",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "完整参数实验放末尾且可跳过。"
+        }
+      ]
+    },
+    {
+      "n": 61,
+      "question": "先做再讲与先讲再做如何取舍？",
+      "refs": [
+        "R05-O02",
+        "R09-O02"
+      ],
+      "analysis": "无对象解释的盲操作和无例子的术语堆积都不合适。先给可识别对象，再一轮示范，再命名一般机制。",
+      "decision": "对象→示范→机制",
+      "change": "首个示例以真实输入字段为起点；演示后总结通用循环与职责，不隐藏必要前提",
+      "next": "练习是否应该沿用熟悉案例？",
+      "previous_iteration": 60,
+      "previous_state": "每实验写唯一主问题，扩展资料按需读；不增设通用万能沙盒",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R05-O02",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "重复对局后才揭示对手策略。"
+        },
+        {
+          "id": "R09-O02",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-9",
+          "observation": "小节先区分点和箭头，再进入向量加法、缩放与线性组合。"
+        }
+      ]
+    },
+    {
+      "n": 62,
+      "question": "练习是否应该沿用熟悉案例？",
+      "refs": [
+        "R06-O05",
+        "R15-O04"
+      ],
+      "analysis": "沿用同一案例改变一个事实能检验机制，换全新故事会把阅读难度混进理解评估。",
+      "decision": "先同例变条件",
+      "change": "自测从同一聚餐任务增加未知、授权或遗漏条件，后续才给迁移问题",
+      "next": "怎样判断读者只是记住名词？",
+      "previous_iteration": 61,
+      "previous_state": "首个示例以真实输入字段为起点；演示后总结通用循环与职责，不隐藏必要前提",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R06-O05",
+          "url": "https://ncase.me/crowds/",
+          "observation": "同一旧谜题改规则后重做。"
+        },
+        {
+          "id": "R15-O04",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "首关演示一次 commit，再让读者自行做两次完成目标。"
+        }
+      ]
+    },
+    {
+      "n": 63,
+      "question": "怎样判断读者只是记住名词？",
+      "refs": [
+        "R15-O06",
+        "R09-O01"
+      ],
+      "analysis": "要求复述Harness定义不能证明理解执行边界。更有价值的是指出谁执行、当前知道什么、下一步依据是什么。",
+      "decision": "任务式验收",
+      "change": "自测必须要求机制判断与解释理由，避免只考英文名或记忆顺序",
+      "next": "并行返回次序不同，图文怎样保持结果对应？",
+      "previous_iteration": 62,
+      "previous_state": "自测从同一聚餐任务增加未知、授权或遗漏条件，后续才给迁移问题",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R15-O06",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "分支与相对引用关卡写明应创建、切换或移动到的目标。"
+        },
+        {
+          "id": "R09-O01",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html",
+          "observation": "Vectors 开头把要会的操作、要认识的图和词汇分列在学习目标中。"
+        }
+      ]
+    },
+    {
+      "n": 64,
+      "question": "并行返回次序不同，图文怎样保持结果对应？",
+      "refs": [
+        "R15-O03",
+        "R11-O04"
+      ],
+      "analysis": "稳定编号让不同区域的对象仍可指认。教材应显示Q01甲、Q02乙、Q03丙各自结果，即使乙先返回也按请求编号配对；不按页面左右顺序猜。技术规则来自指南第7章及工具调用官方约定，教材仅启发表现。",
+      "decision": "采用稳定对象配对",
+      "change": "结果到达次序与请求次序分列，保留请求参数和编号；读者据此归属结果",
+      "next": "术语能否全部换成日常比喻？",
+      "previous_iteration": 63,
+      "previous_state": "自测必须要求机制判断与解释理由，避免只考英文名或记忆顺序",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R15-O03",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "第一关用 C0、C1 标识提交，解释箭头表示祖先关系。"
+        },
+        {
+          "id": "R11-O04",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 分别描述调用栈中的局部变量和堆中的对象及指向关系。"
+        }
+      ],
+      "revision_after_independent_review": true
+    },
+    {
+      "n": 65,
+      "question": "术语能否全部换成日常比喻？",
+      "refs": [
+        "R10-O07",
+        "R13-O04"
+      ],
+      "analysis": "用户认可输入输出执行，需要读懂实际技术。用管家大脑等人格比喻替换会丢失职责。",
+      "decision": "保留准确术语",
+      "change": "术语配具体作用与对象；类比只帮助入门，立即回到程序、字段和真实边界",
+      "next": "如何引入正常路径之外的边界？",
+      "previous_iteration": 64,
+      "previous_state": "结果到达次序与请求次序分列，保留请求参数和编号；读者据此归属结果",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R10-O07",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "定义长度后，正文把 scalar 解释为普通数字，并把具体长度计算延后。"
+        },
+        {
+          "id": "R13-O04",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "注意力段从翻译等动作过渡到查询、分数与归一化。"
+        }
+      ]
+    },
+    {
+      "n": 66,
+      "question": "如何引入正常路径之外的边界？",
+      "refs": [
+        "R09-O06",
+        "R01-O08"
+      ],
+      "analysis": "先学正常机制后，需要近邻反例纠正绝对化判断。反例要只变化关键条件，不扩展成故障大全。",
+      "decision": "正常例旁放最小反例",
+      "change": "请求未执行、工具返回未知、执行正常但目标未达成各配一项最小差别",
+      "next": "什么时候应引入改进机制？",
+      "previous_iteration": 65,
+      "previous_state": "术语配具体作用与对象；类比只帮助入门，立即回到程序、字段和真实边界",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O06",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-11",
+          "observation": "线性组合先讨论平面中的两向量，再单列共线向量的结果范围。"
+        },
+        {
+          "id": "R01-O08",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】贪心搜索先给顺利例，再用复杂地图展示较长路径。"
+        }
+      ]
+    },
+    {
+      "n": 67,
+      "question": "什么时候应引入改进机制？",
+      "refs": [
+        "R04-O08",
+        "R16-O04"
+      ],
+      "analysis": "先列摘要、重试、检查点等名词会像功能清单。应先指出已有路径哪里受阻，再解释为何加入机制。",
+      "decision": "限制先于方案",
+      "change": "每个进阶机制以原路径的具体缺口开始，并保留方案不适用的情况",
+      "next": "不确定性的解释要多明确？",
+      "previous_iteration": 66,
+      "previous_state": "请求未执行、工具返回未知、执行正常但目标未达成各配一项最小差别",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R04-O08",
+          "url": "https://ciechanow.ski/gears/",
+          "observation": "【观察：页面文本】摩擦盘的理想假设先被打滑打破，随后引入齿轮。"
+        },
+        {
+          "id": "R16-O04",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章说明缺少相似词组的局限，再引入频繁词与前缀限制。"
+        }
+      ]
+    },
+    {
+      "n": 68,
+      "question": "不确定性的解释要多明确？",
+      "refs": [
+        "R16-O07",
+        "R02-O02"
+      ],
+      "analysis": "教学确定轨迹来自预设数据，不能代表模型必然如此。未知结果及概率输出应被准确区分。",
+      "decision": "限定模拟论断",
+      "change": "交互展示预设示例规则，不声称真实模型必然选同一动作；结果真实性仍由来源与验证决定",
+      "next": "键盘支持如何验收？",
+      "previous_iteration": 67,
+      "previous_state": "每个进阶机制以原路径的具体缺口开始，并保留方案不适用的情况",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R16-O07",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章给一个跨来源预测更好的个例，说明通常规律不是硬规则。"
+        },
+        {
+          "id": "R02-O02",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】政策例开始前明确说明其分析是虚构且可能不准。"
+        }
+      ]
+    },
+    {
+      "n": 69,
+      "question": "键盘支持如何验收？",
+      "refs": [
+        "R06-O08",
+        "R14-O05"
+      ],
+      "analysis": "原页有快捷键说明不等于无障碍。我们的控件应使用原生按钮、选项与焦点，而不是只能拖动画布。 原案例只启发表现方法；键盘、窄屏、刷新行为是本项目设计约束，尚未在原站实测。",
+      "decision": "语义控件优先",
+      "change": "所有核心动作可Tab到达并用Enter/Space操作，反馈可读，有可见焦点，无悬停唯一入口",
+      "next": "小屏幕怎样保留因果？",
+      "previous_iteration": 68,
+      "previous_state": "交互展示预设示例规则，不声称真实模型必然选同一动作；结果真实性仍由来源与验证决定",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R06-O08",
+          "url": "https://ncase.me/crowds/",
+          "observation": "提供重画与键盘操作说明。"
+        },
+        {
+          "id": "R14-O05",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "页面提示悬停放大单节点输出，也提示可编辑权重或偏置。"
+        }
+      ]
+    },
+    {
+      "n": 70,
+      "question": "小屏幕怎样保留因果？",
+      "refs": [
+        "R14-O02",
+        "R09-O03"
+      ],
+      "analysis": "桌面并列可改成竖向，但对象顺序和编号应保留。不能只缩放整张宽图让字变得不可读。 原案例只启发表现方法；键盘、窄屏、刷新行为是本项目设计约束，尚未在原站实测。",
+      "decision": "顺序重排",
+      "change": "窄屏输入→处理→结果竖排，表格可局部横滚，正文不产生整体横向溢出",
+      "next": "动画默认状态如何安排？",
+      "previous_iteration": 69,
+      "previous_state": "所有核心动作可Tab到达并用Enter/Space操作，反馈可读，有可见焦点，无悬停唯一入口",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O02",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "主界面区分 Data、Features、神经网络与 Output。"
+        },
+        {
+          "id": "R09-O03",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-10",
+          "observation": "Vector Algebra and Geometry 同时解释数字运算与几何构造，而非另建一套图像概念。"
+        }
+      ]
+    },
+    {
+      "n": 71,
+      "question": "动画默认状态如何安排？",
+      "refs": [
+        "R04-O01",
+        "R08-O03"
+      ],
+      "analysis": "持续运动会争夺注意力，暂停也容易误认为取消真实任务。教程的核心变化适合离散状态。",
+      "decision": "默认静止",
+      "change": "无自动播放；尊重减少动态偏好；动画暂停只解释为展示暂停",
+      "next": "打印版如何保留实验结论？",
+      "previous_iteration": 70,
+      "previous_state": "窄屏输入→处理→结果竖排，表格可局部横滚，正文不产生整体横向溢出",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R04-O01",
+          "url": "https://ciechanow.ski/gears/",
+          "observation": "【观察：页面文本】开头说明每图可暂停，也可全局暂停动画。"
+        },
+        {
+          "id": "R08-O03",
+          "url": "https://ncase.me/polygons/",
+          "observation": "先手动移动，再自动运行。"
+        }
+      ]
+    },
+    {
+      "n": 72,
+      "question": "打印版如何保留实验结论？",
+      "refs": [
+        "R02-O06",
+        "R11-O05"
+      ],
+      "analysis": "打印无法保留所有可选择状态，必须另列固定示例与关键分支结论，不打印无法使用的按钮。",
+      "decision": "静态打印回退",
+      "change": "打印展开所有正文，隐藏阅读控件，保留实验规则及示例状态表",
+      "next": "深链接与前后导航怎样共同工作？",
+      "previous_iteration": 71,
+      "previous_state": "无自动播放；尊重减少动态偏好；动画暂停只解释为展示暂停",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O06",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者要求静态解释成立，读者按自己的疑问再交互。"
+        },
+        {
+          "id": "R11-O05",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "Demo 另列截至该步已经打印的内容，而非只展示最终输出。"
+        }
+      ]
+    },
+    {
+      "n": 73,
+      "question": "深链接与前后导航怎样共同工作？",
+      "refs": [
+        "R03-O08",
+        "R15-O08"
+      ],
+      "analysis": "读者可能从README跳进中间章或回看小节。导航应由真实章节锚点驱动，刷新不能回顶丢位置。 原案例只启发表现方法；键盘、窄屏、刷新行为是本项目设计约束，尚未在原站实测。",
+      "decision": "锚点保留",
+      "change": "章节链接、浏览器后退和刷新都显示目标章，页内展开不改变章节身份",
+      "next": "可选解答应默认展示吗？",
+      "previous_iteration": 72,
+      "previous_state": "打印展开所有正文，隐藏阅读控件，保留实验规则及示例状态表",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O08",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】章末提供下载与下一章入口，页面也列章节导航。"
+        },
+        {
+          "id": "R15-O08",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "合并关卡提示可用 objective 重新显示要求。"
+        }
+      ]
+    },
+    {
+      "n": 74,
+      "question": "可选解答应默认展示吗？",
+      "refs": [
+        "R12-O07",
+        "R11-O08"
+      ],
+      "analysis": "先看答案可能让读者误以为会判断，但强制测验又打断阅读。自测可选、答案可查更合适。",
+      "decision": "自测自主",
+      "change": "先给短题，提交后解释或主动查看答案；正文无需通关即可继续",
+      "next": "怎样区别可观察依据与模型思考？",
+      "previous_iteration": 73,
+      "previous_state": "章节链接、浏览器后退和刷新都显示目标章，页内展开不改变章节身份",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O07",
+          "url": "https://javascript.info/introduction-browser-events#tasks",
+          "observation": "Tasks 先列目标、演示与任务 sandbox，后给 solution 按钮及解答入口。"
+        },
+        {
+          "id": "R11-O08",
+          "url": "https://pythontutor.com/",
+          "observation": "官网教师栏目建议让学生猜测每步结果，再配合逐步可视化。"
+        }
+      ]
+    },
+    {
+      "n": 75,
+      "question": "怎样区别可观察依据与模型思考？",
+      "refs": [
+        "R16-O03",
+        "R01-O05"
+      ],
+      "analysis": "系统能公开输入和结果引用，不能用写好的内心独白冒充模型实际内部过程。",
+      "decision": "只呈现可核对对象",
+      "change": "反馈写用于判断的信息与程序规则，不展示伪造逐字思考链",
+      "next": "完整性应按什么衡量？",
+      "previous_iteration": 74,
+      "previous_state": "先给短题，提交后解释或主动查看答案；正文无需通关即可继续",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R16-O03",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "候选词旁列出历史中最匹配的词组。"
+        },
+        {
+          "id": "R01-O05",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】回溯段要求移动终点，沿保存的箭头返回起点。"
+        }
+      ]
+    },
+    {
+      "n": 76,
+      "question": "完整性应按什么衡量？",
+      "refs": [
+        "R13-O01",
+        "R09-O01"
+      ],
+      "analysis": "字数和章节数不证明完整。需要覆盖从用户目标到运行、状态、控制、验收及系统定位的依赖链。",
+      "decision": "按问题覆盖验收",
+      "change": "研究后审阅使用机制覆盖表；内容删改必须保留必要前提与技术结论",
+      "next": "方法参考是否要复制原图资产？",
+      "previous_iteration": 75,
+      "previous_state": "反馈写用于判断的信息与程序规则，不展示伪造逐字思考链",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O01",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "开篇用四个能力说明分别链接四类扩展。"
+        },
+        {
+          "id": "R09-O01",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html",
+          "observation": "Vectors 开头把要会的操作、要认识的图和词汇分列在学习目标中。"
+        }
+      ]
+    },
+    {
+      "n": 77,
+      "question": "方法参考是否要复制原图资产？",
+      "refs": [
+        "R13-O08",
+        "R07-O06"
+      ],
+      "analysis": "用户需要研究方法而非重贴教材。复制图容易混淆技术对象和许可，HTML自身语义图更便于维护。",
+      "decision": "原创机制图",
+      "change": "保留来源链接与方法分析，重新绘制Harness图和示例，不下载原教材资产作包装",
+      "next": "来源证据该保存到什么粒度？",
+      "previous_iteration": 76,
+      "previous_state": "研究后审阅使用机制覆盖表；内容删改必须保留必要前提与技术结论",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O08",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "图注区分据论文改写的图与直接引用的图。"
+        },
+        {
+          "id": "R07-O06",
+          "url": "https://ncase.me/loopy/v1.1/pages/examples/",
+          "observation": "示例页先列三个具体主题。"
+        }
+      ]
+    },
+    {
+      "n": 78,
+      "question": "来源证据该保存到什么粒度？",
+      "refs": [
+        "R11-O06",
+        "R13-O08"
+      ],
+      "analysis": "只给网站主页无法追溯判断。每方法需链接具体案例、观察编号和看到的页面内容。",
+      "decision": "可追溯记录",
+      "change": "方法文档保留案例与观察ID，循环记录保留问题、证据、取舍和设计变化",
+      "next": "聚餐预算和运行预算同叫预算，怎样避免混淆？",
+      "previous_iteration": 77,
+      "previous_state": "保留来源链接与方法分析，重新绘制Harness图和示例，不下载原教材资产作包装",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R11-O06",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "官方错误报告指引要求生成永久链接，并说明预期与实际行为的差异。"
+        },
+        {
+          "id": "R13-O08",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "图注区分据论文改写的图与直接引用的图。"
+        }
+      ]
+    },
+    {
+      "n": 79,
+      "question": "聚餐预算和运行预算同叫预算，怎样避免混淆？",
+      "refs": [
+        "R01-O07",
+        "R14-O06"
+      ],
+      "analysis": "Red Blob把步数与距离分列，TF将训练/测试指标分开，启发按含义与单位独立显示。1800元是业务方案上限；模型费用、时间、工具次数是运行限制，不能合成一个红色超预算。",
+      "decision": "分开目标与运行指标",
+      "change": "预算卡分别标业务总价1800元与运行限制类型，停止说明指出是哪一种限制",
+      "next": "设计推断能否直接当用户验证？",
+      "previous_iteration": 78,
+      "previous_state": "方法文档保留案例与观察ID，循环记录保留问题、证据、取舍和设计变化",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R01-O07",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】成本段并列步数与距离，再比较两类搜索。"
+        },
+        {
+          "id": "R14-O06",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "输出区分别列 Training loss 和 Test loss。"
+        }
+      ],
+      "revision_after_independent_review": true
+    },
+    {
+      "n": 80,
+      "question": "设计推断能否直接当用户验证？",
+      "refs": [
+        "R09-O01",
+        "R11-O08"
+      ],
+      "analysis": "作者建议、代理审阅和浏览器运行都不能证明非技术真人读者已理解。我们能验收机制、可用性和解释覆盖。",
+      "decision": "证据分层",
+      "change": "报告区分原文观察、迁移判断、实际控件验证；不宣称已做真人学习效果实验",
+      "next": "最终应保留多少种教学交互？",
+      "previous_iteration": 79,
+      "previous_state": "预算卡分别标业务总价1800元与运行限制类型，停止说明指出是哪一种限制",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O01",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html",
+          "observation": "Vectors 开头把要会的操作、要认识的图和词汇分列在学习目标中。"
+        },
+        {
+          "id": "R11-O08",
+          "url": "https://pythontutor.com/",
+          "observation": "官网教师栏目建议让学生猜测每步结果，再配合逐步可视化。"
+        }
+      ]
+    },
+    {
+      "n": 81,
+      "question": "最终应保留多少种教学交互？",
+      "refs": [
+        "R14-O08",
+        "R05-O08"
+      ],
+      "analysis": "方法库有七种交互，不等于要建七个应用。组合可用一个单步实验承担状态、依据和回看，少量其他实验补缺口。",
+      "decision": "最小充分组合",
+      "change": "规划最多四个核心实验：运行事件、信息选择、检查与授权、异常与停止；自测复用现有结构",
+      "next": "哪个实验必须首先出现？",
+      "previous_iteration": 80,
+      "previous_state": "报告区分原文观察、迁移判断、实际控件验证；不宣称已做真人学习效果实验",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R14-O08",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "作者提供隐藏可见功能并保存特定课题链接的说明。"
+        },
+        {
+          "id": "R05-O08",
+          "url": "https://ncase.me/trust/words.html",
+          "observation": "完整参数实验放末尾且可跳过。"
+        }
+      ]
+    },
+    {
+      "n": 82,
+      "question": "哪个实验必须首先出现？",
+      "refs": [
+        "R01-O01",
+        "R11-O01"
+      ],
+      "analysis": "必须先建立输出请求与真实执行的分界，才有理解状态、授权和恢复的基础。",
+      "decision": "运行事件优先",
+      "change": "先演示输入→模型输出→程序检查→执行→返回→下一轮输入，其余实验引用同一术语",
+      "next": "是否要把架构位置也做成操作实验？",
+      "previous_iteration": 81,
+      "previous_state": "规划最多四个核心实验：运行事件、信息选择、检查与授权、异常与停止；自测复用现有结构",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R01-O01",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】开头指示读者移动起点和终点，查看得到的路径。"
+        },
+        {
+          "id": "R11-O01",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "可视化页先给写代码和选语言区域，再给 Visualize Execution 按钮。"
+        }
+      ]
+    },
+    {
+      "n": 83,
+      "question": "是否要把架构位置也做成操作实验？",
+      "refs": [
+        "R13-O01",
+        "R14-O02"
+      ],
+      "analysis": "逻辑职责图与两种部署示例用静态对照即可解释。为位置增加拖动会暗示任意挪动职责不改变行为。",
+      "decision": "架构位置用静态图",
+      "change": "分别展示模型、Harness、工具服务与应用的职责，客户端/服务端位置用例而非拖动",
+      "next": "检查实验如何保持技术严谨？",
+      "previous_iteration": 82,
+      "previous_state": "先演示输入→模型输出→程序检查→执行→返回→下一轮输入，其余实验引用同一术语",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O01",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "开篇用四个能力说明分别链接四类扩展。"
+        },
+        {
+          "id": "R14-O02",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "主界面区分 Data、Features、神经网络与 Output。"
+        }
+      ]
+    },
+    {
+      "n": 84,
+      "question": "检查实验如何保持技术严谨？",
+      "refs": [
+        "R12-O04",
+        "R08-O01"
+      ],
+      "analysis": "格式合法、业务参数合法、用户授权三层必须独立；一个allow开关不应代替全部检查。 教材引用支持展现方法；技术规则依据本指南相关章节的官方资料。",
+      "decision": "最小三层对照",
+      "change": "用四个预设请求展示格式错误、语义错误、无权限、允许只读，结果列出通过与未通过层",
+      "next": "上下文实验怎样不假装调用真实模型？",
+      "previous_iteration": 83,
+      "previous_state": "分别展示模型、Harness、工具服务与应用的职责，客户端/服务端位置用例而非拖动",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O04",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "Possible mistakes 把函数引用与带括号的立即调用相邻对照，并解释后果。"
+        },
+        {
+          "id": "R08-O01",
+          "url": "https://ncase.me/polygons/",
+          "observation": "只允许移动不满意的形状。"
+        }
+      ]
+    },
+    {
+      "n": 85,
+      "question": "上下文实验怎样不假装调用真实模型？",
+      "refs": [
+        "R03-O07",
+        "R02-O02"
+      ],
+      "analysis": "选择记录能直接显示发送清单，不能证明一个真实模型产生某句回答。无需模拟概率输出即可解释边界。",
+      "decision": "只展示可确定输入",
+      "change": "勾选后生成本轮输入预览与缺项说明，明确这是组装示例；不生成伪模型回答",
+      "next": "异常实验的最少情境有哪些？",
+      "previous_iteration": 84,
+      "previous_state": "用四个预设请求展示格式错误、语义错误、无权限、允许只读，结果列出通过与未通过层",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O07",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】卡牌实验让读者点选哪些卡进入牌组。"
+        },
+        {
+          "id": "R02-O02",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】政策例开始前明确说明其分析是虚构且可能不准。"
+        }
+      ]
+    },
+    {
+      "n": 86,
+      "question": "异常实验的最少情境有哪些？",
+      "refs": [
+        "R06-O06",
+        "R16-O04"
+      ],
+      "analysis": "过多故障类目不利入门。最少应覆盖只读可重试、外部副作用结果未知、等待授权和目标已满足。",
+      "decision": "四情境足够展示分界",
+      "change": "异常实验以四个固定状态让读者判断下一步，反馈解释事实和规则",
+      "next": "为什么不增加成本成功率曲线？",
+      "previous_iteration": 85,
+      "previous_state": "勾选后生成本轮输入预览与缺项说明，明确这是组装示例；不生成伪模型回答",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R06-O06",
+          "url": "https://ncase.me/crowds/",
+          "observation": "反向任务要求阻止传播。"
+        },
+        {
+          "id": "R16-O04",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "文章说明缺少相似词组的局限，再引入频繁词与前缀限制。"
+        }
+      ]
+    },
+    {
+      "n": 87,
+      "question": "为什么不增加成本成功率曲线？",
+      "refs": [
+        "R04-O06",
+        "R16-O06"
+      ],
+      "analysis": "未实测的Agent成功率无法像物理齿轮比一样计算。预算上限可以说明，但伪造曲线会使技术定位失真。",
+      "decision": "拒绝无证据指标",
+      "change": "评价章节讲任务集、指标、轨迹和证据，不展示编造的Harness优劣分数",
+      "next": "人数从12变14后，旧证据怎样显示适用范围？",
+      "previous_iteration": 86,
+      "previous_state": "异常实验以四个固定状态让读者判断下一步，反馈解释事实和规则",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R04-O06",
+          "url": "https://ciechanow.ski/gears/",
+          "observation": "【观察：页面文本】半径比例可调的例子同时解释输出速度与力的取舍。"
+        },
+        {
+          "id": "R16-O06",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "候选比较后，文章转向按正确字符比例衡量预测表现。"
+        }
+      ]
+    },
+    {
+      "n": 88,
+      "question": "人数从12变14后，旧证据怎样显示适用范围？",
+      "refs": [
+        "R16-O05",
+        "R10-O05"
+      ],
+      "analysis": "原教材通过固定输入和列不变项帮助归因。人数改变时，旧空位结果仍是12人条件下的证据，不能擦掉也不能视为14人已确认。应同时显示新目标版本与原查询条件。",
+      "decision": "保留条件版本对照",
+      "change": "旧证据标原人数与日期，新任务标14人待重查；图中只改人数，不同步编改餐厅事实",
+      "next": "技术和产品两个视角各查什么？",
+      "previous_iteration": 87,
+      "previous_state": "评价章节讲任务集、指标、轨迹和证据，不展示编造的Harness优劣分数",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R16-O05",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "第二块给同一文本并列展示四个来源模型的候选。"
+        },
+        {
+          "id": "R10-O05",
+          "url": "https://immersivemath.com/ila/ch02_vectors/ch02.html",
+          "observation": "图 2.3 的不同状态图注强调向量位置改变后，方向和长度不变。"
+        }
+      ],
+      "revision_after_independent_review": true
+    },
+    {
+      "n": 89,
+      "question": "技术和产品两个视角各查什么？",
+      "refs": [
+        "R11-O07",
+        "R15-O06"
+      ],
+      "analysis": "技术查对象、执行者、边界、异常和定位准确；产品查首次阅读是否能完成判断、是否负担过重。",
+      "decision": "独立审阅合并",
+      "change": "技术审阅与读者产品审阅并行，最终用同一覆盖表与示例冲突检查合并",
+      "next": "如何让新图不成为正文之外的装饰？",
+      "previous_iteration": 88,
+      "previous_state": "旧证据标原人数与日期，新任务标14人待重查；图中只改人数，不同步编改餐厅事实",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R11-O07",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "可视化页明确说明 JavaScript 支持独立执行，不支持操作网页 DOM 的前端代码。"
+        },
+        {
+          "id": "R15-O06",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "分支与相对引用关卡写明应创建、切换或移动到的目标。"
+        }
+      ]
+    },
+    {
+      "n": 90,
+      "question": "如何让新图不成为正文之外的装饰？",
+      "refs": [
+        "R09-O04",
+        "R12-O02"
+      ],
+      "analysis": "每图必须对应正文中一个理解困难点，并能指认具体数据或关系，否则删除。",
+      "decision": "建立图文对应清单",
+      "change": "规划列所在章、读者问题、方法编号、图对象、交互规则、静态解释与验收",
+      "next": "应怎样评价教材方法是否迁移成功？",
+      "previous_iteration": 89,
+      "previous_state": "技术审阅与读者产品审阅并行，最终用同一覆盖表与示例冲突检查合并",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R09-O04",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-10",
+          "observation": "平行四边形加法、减法、缩放各自紧接对应解释出现交互示例入口。"
+        },
+        {
+          "id": "R12-O02",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "首个最短示例的 HTML 带运行、打开 sandbox 入口；同类示例结果 iframe 与代码相邻。"
+        }
+      ]
+    },
+    {
+      "n": 91,
+      "question": "应怎样评价教材方法是否迁移成功？",
+      "refs": [
+        "R12-O08",
+        "R15-O06"
+      ],
+      "analysis": "页面能点击只是可用性，机制解释还要能指出具体输入、执行边界和未知项。两类验收都需要。",
+      "decision": "分层验收",
+      "change": "实施后测试控件分支与状态一致，再检查学习问题是否有可读答案；真人效果仍待用户验收",
+      "next": "原教材自身的缺点是否也要记录？",
+      "previous_iteration": 90,
+      "previous_state": "规划列所在章、读者问题、方法编号、图对象、交互规则、静态解释与验收",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O08",
+          "url": "https://javascript.info/introduction-browser-events#tasks",
+          "observation": "移动球练习同时要求位置准确、不越界，并在滚动和尺寸变化后保持正确。"
+        },
+        {
+          "id": "R15-O06",
+          "url": "https://learngitbranching.js.org/generatedDocs/levels.html",
+          "observation": "分支与相对引用关卡写明应创建、切换或移动到的目标。"
+        }
+      ]
+    },
+    {
+      "n": 92,
+      "question": "原教材自身的缺点是否也要记录？",
+      "refs": [
+        "R02-O04",
+        "R14-O07"
+      ],
+      "analysis": "优秀不意味着所有形式适合本用户。多视图、混色、悬停和复杂设置各有成本。",
+      "decision": "保留拒绝理由",
+      "change": "方法库同时记录不采用的形式与原因，最终规划不能只罗列借鉴优点",
+      "next": "参考旧教材会否影响技术现状描述？",
+      "previous_iteration": 91,
+      "previous_state": "实施后测试控件分支与状态一致，再检查学习问题是否有可读答案；真人效果仍待用户验收",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O04",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者说明滤波器同时有六种表示，共同响应参数。"
+        },
+        {
+          "id": "R14-O07",
+          "url": "https://playground.tensorflow.org/",
+          "observation": "正文分别说明数据点、连线和背景颜色所表示的量。"
+        }
+      ]
+    },
+    {
+      "n": 93,
+      "question": "参考旧教材会否影响技术现状描述？",
+      "refs": [
+        "R03-O08",
+        "R13-O08"
+      ],
+      "analysis": "旧教材用于研究展现方法，Harness现状仍需当前官方技术证据。两个来源用途不能混为一谈。",
+      "decision": "来源用途分明",
+      "change": "教材研究来源与Harness技术来源独立索引；技术现状标核查日期，新增事实重新核实",
+      "next": "所有研究材料是否应塞进教程正文？",
+      "previous_iteration": 92,
+      "previous_state": "方法库同时记录不采用的形式与原因，最终规划不能只罗列借鉴优点",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O08",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】章末提供下载与下一章入口，页面也列章节导航。"
+        },
+        {
+          "id": "R13-O08",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "图注区分据论文改写的图与直接引用的图。"
+        }
+      ]
+    },
+    {
+      "n": 94,
+      "question": "所有研究材料是否应塞进教程正文？",
+      "refs": [
+        "R12-O06",
+        "R07-O01"
+      ],
+      "analysis": "100轮决策是设计依据，不是非技术读者的学习任务。正文只承载Harness解释，研究包供验收查证。",
+      "decision": "研究包独立",
+      "change": "README分别链接阅读版、完整正文、方法研究和规划，教程只简述设计依据",
+      "next": "技术完整性与简单易懂是否冲突？",
+      "previous_iteration": 93,
+      "previous_state": "教材研究来源与Harness技术来源独立索引；技术现状标核查日期，新增事实重新核实",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R12-O06",
+          "url": "https://javascript.info/introduction-browser-events",
+          "observation": "addEventListener 的 options 列表解释基本用途，把捕获和默认行为链接到后续章节。"
+        },
+        {
+          "id": "R07-O01",
+          "url": "https://ncase.me/loopy/",
+          "observation": "简介分成三个动词主题。"
+        }
+      ]
+    },
+    {
+      "n": 95,
+      "question": "技术完整性与简单易懂是否冲突？",
+      "refs": [
+        "R02-O06",
+        "R09-O07"
+      ],
+      "analysis": "深度应保留，但首次阅读的顺序、局部图示和可选协议深读可以降低负担。删掉异常与状态会损伤准确性。",
+      "decision": "深度保留呈现优化",
+      "change": "优先补导学、图解和局部实例，不通过大幅缩短正文或隐藏关键分界实现简洁",
+      "next": "研究里哪些方法可由同一组件复用？",
+      "previous_iteration": 94,
+      "previous_state": "README分别链接阅读版、完整正文、方法研究和规划，教程只简述设计依据",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R02-O06",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】作者要求静态解释成立，读者按自己的疑问再交互。"
+        },
+        {
+          "id": "R09-O07",
+          "url": "https://textbooks.math.gatech.edu/ila/vectors.html#subsection-9",
+          "observation": "点与向量解释后，符号习惯放在 Remark，另一种理解放在 Note。"
+        }
+      ]
+    },
+    {
+      "n": 96,
+      "question": "研究里哪些方法可由同一组件复用？",
+      "refs": [
+        "R16-O08",
+        "R03-O01"
+      ],
+      "analysis": "事件卡、字段表、约束卡和解释反馈可以跨实验保持样式，但不同机制的实际规则不能复用错。",
+      "decision": "组件一致规则独立",
+      "change": "统一控件与状态外观，各实验数据与判定按技术含义独立编写",
+      "next": "核验有失败时如何记录？",
+      "previous_iteration": 95,
+      "previous_state": "优先补导学、图解和局部实例，不通过大幅缩短正文或隐藏关键分界实现简洁",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R16-O08",
+          "url": "https://pudding.cool/2019/04/text-prediction/",
+          "observation": "后续 Friend Data 块重复账号、模型与文本选择控件。"
+        },
+        {
+          "id": "R03-O01",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】本章用硬币、骰子、卡牌分别解释三种统计概念。"
+        }
+      ]
+    },
+    {
+      "n": 97,
+      "question": "核验有失败时如何记录？",
+      "refs": [
+        "R11-O06",
+        "R02-O02"
+      ],
+      "analysis": "网页加载失败不证明设计不好，也不应消失在成功报告里。需要记录发生阶段和未取得的证据。",
+      "decision": "报告边界",
+      "change": "来源浏览器报告保留Red Blob实际单步成功与Seeing Theory/TF加载阻塞，不冒充全部已操作",
+      "next": "容量图怎样区分记录条数、字数与token？",
+      "previous_iteration": 96,
+      "previous_state": "统一控件与状态外观，各实验数据与判定按技术含义独立编写",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R11-O06",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "官方错误报告指引要求生成永久链接，并说明预期与实际行为的差异。"
+        },
+        {
+          "id": "R02-O02",
+          "url": "https://worrydream.com/ExplorableExplanations/",
+          "observation": "【观察：页面文本】政策例开始前明确说明其分析是虚构且可能不准。"
+        }
+      ]
+    },
+    {
+      "n": 98,
+      "question": "容量图怎样区分记录条数、字数与token？",
+      "refs": [
+        "R03-O04",
+        "R01-O07"
+      ],
+      "analysis": "Seeing Theory明确区分理论量与样本量，Red Blob区分步数与成本。迁移的是计量名称和范围明确；消息条数、中文字数都不等于token占用。教学容量示例必须说明单位是自拟，具体容量由模型规则决定。",
+      "decision": "单位必须可见",
+      "change": "容量图写教学单位与输入/生成范围，不把记录条数或字数标成精确token；不画虚构模型规格",
+      "next": "外部记录更新为何不画成模型权重更新？",
+      "previous_iteration": 97,
+      "previous_state": "来源浏览器报告保留Red Blob实际单步成功与Seeing Theory/TF加载阻塞，不冒充全部已操作",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R03-O04",
+          "url": "https://seeing-theory.brown.edu/basic-probability/index.html",
+          "observation": "【观察：页面文本】期望段紧接骰子实验，区分期望与运行样本均值。"
+        },
+        {
+          "id": "R01-O07",
+          "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+          "observation": "【观察：页面文本】成本段并列步数与距离，再比较两类搜索。"
+        }
+      ],
+      "revision_after_independent_review": true
+    },
+    {
+      "n": 99,
+      "question": "外部记录更新为何不画成模型权重更新？",
+      "refs": [
+        "R13-O02",
+        "R13-O03"
+      ],
+      "analysis": "Distill先明确读写对象再解释操作，这启发把运行记录文件作为具体对象。Harness写偏好文件属于外部数据操作；下一次读取后进入输入，通常不改变训练权重。不能将原文的向量记忆模型直接移作Harness机制。",
+      "decision": "按对象分区",
+      "change": "外部记录→读取→本轮输入→生成，模型权重另列已有参数，避免记忆箭头直接指向训练更新",
+      "next": "一个API响应包含托管多步时，图怎样避免误计模型调用？",
+      "previous_iteration": 98,
+      "previous_state": "容量图写教学单位与输入/生成范围，不把记录条数或字数标成精确token；不画虚构模型规格",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O02",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "外部记忆段先说明记忆是向量数组，再解释读写。"
+        },
+        {
+          "id": "R13-O03",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "读和写分别解释，但共享关注分布这个机制。"
+        }
+      ],
+      "revision_after_independent_review": true
+    },
+    {
+      "n": 100,
+      "question": "一个API响应包含托管多步时，图怎样避免误计模型调用？",
+      "refs": [
+        "R13-O06",
+        "R11-O01"
+      ],
+      "analysis": "完整结构与局部步骤分开，可让读者辨认服务边界。应用执行自定义工具的教学图展示逐次调用，但托管请求内部可能有多轮模型/工具工作；不能从一次HTTP往返推断一次判断。事实依据指南第2/13章官方运行文档。",
+      "decision": "服务边界显式标明",
+      "change": "图注写当前图是应用持有函数工具路径；托管响应外框内可有多步，教学步不当调用次数",
+      "next": "转入已完成的大纲审阅与定稿实施；阶段总结不计独立教学问题",
+      "previous_iteration": 99,
+      "previous_state": "外部记录→读取→本轮输入→生成，模型权重另列已有参数，避免记忆箭头直接指向训练更新",
+      "evidence_mode": "原页面文字；实际操作另见 browser-checks.json",
+      "evidence": [
+        {
+          "id": "R13-O06",
+          "url": "https://distill.pub/2016/augmented-rnns/",
+          "observation": "可变计算段先提完整三步图，再逐项解释状态、停止权重和预算。"
+        },
+        {
+          "id": "R11-O01",
+          "url": "https://pythontutor.com/visualize.html",
+          "observation": "可视化页先给写代码和选语言区域，再给 Visualize Execution 按钮。"
+        }
+      ],
+      "revision_after_independent_review": true
+    }
+  ],
+  "browser_space_id": 11,
+  "implementation_started": true,
+  "outline_finalized": true,
+  "review_revisions": [
+    {
+      "n": 64,
+      "original_question": "学习失败时如何提供修正路径？",
+      "new_question": "并行返回次序不同，图文怎样保持结果对应？",
+      "reason": "独立复核要求更具体的教材学习问题；本次重新对照已保存原站观察与指南技术来源"
+    },
+    {
+      "n": 79,
+      "original_question": "研究循环怎样证明不是工具次数充数？",
+      "new_question": "聚餐预算和运行预算同叫预算，怎样避免混淆？",
+      "reason": "独立复核要求更具体的教材学习问题；本次重新对照已保存原站观察与指南技术来源"
+    },
+    {
+      "n": 88,
+      "original_question": "未来教程的大纲审阅应该先看什么？",
+      "new_question": "人数从12变14后，旧证据怎样显示适用范围？",
+      "reason": "独立复核要求更具体的教材学习问题；本次重新对照已保存原站观察与指南技术来源"
+    },
+    {
+      "n": 98,
+      "original_question": "100轮结束时怎样核查计数？",
+      "new_question": "容量图怎样区分记录条数、字数与token？",
+      "reason": "独立复核要求更具体的教材学习问题；本次重新对照已保存原站观察与指南技术来源"
+    },
+    {
+      "n": 99,
+      "original_question": "进入教程审阅的门槛是什么？",
+      "new_question": "外部记录更新为何不画成模型权重更新？",
+      "reason": "独立复核要求更具体的教材学习问题；本次重新对照已保存原站观察与指南技术来源"
+    },
+    {
+      "n": 100,
+      "original_question": "最终研究结论是什么？",
+      "new_question": "一个API响应包含托管多步时，图怎样避免误计模型调用？",
+      "reason": "独立复核要求更具体的教材学习问题；本次重新对照已保存原站观察与指南技术来源"
+    }
+  ],
+  "baseline_sha256_initial": "c4a1115e3b3d35a5e57a50b6fcb0f7d2b9a08de5c826101b15711548b5bf56a2",
+  "baseline_revision_note": "把查甲失败纠正为查询成功但已满，保持执行状态与业务状态区分"
+}
