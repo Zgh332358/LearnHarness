@@ -6,14 +6,15 @@
 
 ## 开始阅读
 
-**[在线阅读完整指南](docs/agent-harness/guide.md)** · **[获取 HTML 图解阅读版](docs/agent-harness/reading.html)**
+**[在线打开图文教材](https://zgh332358.github.io/LearnHarness/)** · [GitHub 阅读全文](docs/agent-harness/guide.md) · [下载 HTML](docs/agent-harness/reading.html)
 
 | 阅读方式 | 入口 | 适合什么情况 |
 | --- | --- | --- |
+| 网页在线阅读 | [GitHub Pages 阅读版](https://zgh332358.github.io/LearnHarness/) | 直接在网页中阅读图解、操作实验，无需下载 |
 | GitHub 在线阅读 | [Markdown 全文](docs/agent-harness/guide.md) | 直接阅读正文，回查术语和来源 |
 | 浏览器图解阅读 | [HTML 阅读版](docs/agent-harness/reading.html) | 按章阅读、操作实验、查找原文、调整字号 |
 
-HTML 文件包含全部样式、脚本与二维图解。打开文件页面后使用下载按钮保存 `reading.html`，再用浏览器打开；也可以下载整个仓库，打开 `docs/agent-harness/reading.html`。无需安装依赖或启动本地服务器。
+在线网页由 GitHub Pages 托管：[打开教材](https://zgh332358.github.io/LearnHarness/)。需要离线阅读时，HTML 文件包含全部样式、脚本与二维图解。打开文件页面后使用下载按钮保存 `reading.html`，再用浏览器打开；也可以下载整个仓库，打开 `docs/agent-harness/reading.html`。无需安装依赖或启动本地服务器。
 
 全文约 **3.3 万中文字，15 章正文、3 个附录、9 幅机制图、4 个教学实验**。正文不要求编程基础；示意代码用于观察字段、记录和职责关系。
 
@@ -81,6 +82,19 @@ Harness 是围绕模型组织和推进任务的运行程序。它准备本轮输
 
 技术与产品资料核查日期为 **2026 年 10 月 7 日**，阅读体验最后验收日期为 **2026 年 10 月 8 日**。API、SDK 与托管服务的能力可能随版本变化；阅读当前技术定位时，应同时查看原始资料和适用日期。
 
+## GitHub Pages 发布
+
+在线地址：**https://zgh332358.github.io/LearnHarness/**。首页会进入新版 `agent-harness/reading.html`，保留入口中的查询参数和章节定位。可直接分享某一章，例如 [第 7 章：本轮上下文](https://zgh332358.github.io/LearnHarness/agent-harness/reading.html#chapter-7)。
+
+当前发布配置为 `main` 分支的 `/docs` 文件夹：
+
+1. 打开仓库的 [Settings → Pages](https://github.com/Zgh332358/LearnHarness/settings/pages)。
+2. 在 **Build and deployment → Source** 选择 **Deploy from a branch**。
+3. Branch 选择 **main**，Folder 选择 **/docs**，点击 **Save**。
+4. 更新 `docs/agent-harness/reading.html` 并推送到 `main`，GitHub 会自动发布；进度和错误可在 [Actions](https://github.com/Zgh332358/LearnHarness/actions) 查看。
+
+`docs/index.html` 是新版阅读入口，`docs/.nojekyll` 让文件按静态文件发布。这套 HTML 无需额外构建工具。配置方式参考 [GitHub 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+
 ## 研究与验证记录
 
 阅读内容与界面背后的规划、方法对照、取舍和验收证据保存在以下两个研究包中。
@@ -107,7 +121,7 @@ Harness 是围绕模型组织和推进任务的运行程序。它准备本轮输
 
 ## 仓库中的其他资料
 
-仓库名为 `learnDSH`。主阅读入口是上面的 Agent Harness 全面拆解指南；早期 DeepSeek Harness 专项资料继续保留，供有相应需求的读者查阅。
+仓库当前名为 `LearnHarness`。主阅读入口是上面的 Agent Harness 全面拆解指南；早期 DeepSeek Harness 专项资料继续保留，供有相应需求的读者查阅。
 
 <details>
 <summary>DeepSeek Harness 专项资料</summary>
